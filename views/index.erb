@@ -1,3 +1,4 @@
+<%= erb :'includes/header' %>
 <link rel="stylesheet" href="/lib/codemirror.css">
 <script src="/lib/codemirror.js"></script>
 <script src="/mode/sass/sass.js"></script>
@@ -14,7 +15,8 @@
 <script>
     var myTextarea = document.querySelector('.js-sass');
     var editor = CodeMirror.fromTextArea(myTextarea, {
-      mode: "sass",
+      matchBrackets: true,
+      mode: "text/x-scss",
       lineNumbers:true
     });
     var css = document.querySelector('.js-css');

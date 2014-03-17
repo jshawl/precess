@@ -1,5 +1,6 @@
 /* BASICS */
-html{
+html,body{
+  height:100%;
   background:#222;
 }
 
@@ -23,6 +24,7 @@ html{
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
   position:absolute;
+  height:100%;
   background:#fff;
 }
 .CodeMirror-scroll {
