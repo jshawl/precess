@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/lib/codemirror.css">
+<script src="/lib/codemirror.js"></script>
+<script src="/mode/sass/sass.js"></script>
+<script src="/mode/css/css.js"></script>
+<form method='post' class='sass' action='/compile'>
+  <textarea class='js-sass' name='sass'><%= @sass %></textarea>
+  <button type='submit'>Compile</button>
+</form>
+<form class='css'>
+  <textarea class='js-css' name='sass'><%= @css %></textarea>
+</form>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    var myTextarea = document.querySelector('.js-sass');
+    var editor = CodeMirror.fromTextArea(myTextarea, {
+      mode: "sass",
+      lineNumbers:true
+    });
+    var css = document.querySelector('.js-css');
+    var csseditor = CodeMirror.fromTextArea(css, {
+      mode: "css",
+      readOnly: true,
+      lineNumbers:true
+    });
+    var timer;
+    editor.on('change', function(cm){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        $.ajax({
+	  type: "POST",
+	  url: '/compile',
+	  data: { 'sass': cm.getValue()}
+	}).done( function(res){
+          console.log(res);
+          $('.js-css').val( res );
+          csseditor.getDoc().setValue(res);
+        }).fail(function (err, msg){
+          console.log('fail');
+          console.log(msg);
+        });
+      }, 1000);
+    });
+</script>
