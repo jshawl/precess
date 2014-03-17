@@ -1,0 +1,66 @@
+body{
+  margin:0;
+}
+
+.css:before,
+.sass:before{
+  position:absolute;
+  right:0;
+  top:0;
+  display:block;
+  background:#666;
+  padding:.5em;
+  color:#fff;
+  text-transform:uppercase;
+  z-index:999;
+}
+
+.css:before{
+  content:'css';
+}
+.sass:before{
+  content:'scss';
+}
+
+body{
+  font-family:'Ubuntu';
+}
+
+header:after{
+  content:' ';
+  display:table;
+  clear:both;
+}
+
+header h1{
+  float:left;
+  font-size:1.5em;
+  margin:0;
+}
+
+header ul{
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+
+header nav{
+  float:right;
+}
+
+header nav a {
+  line-height:2;
+  margin-right:28px;
+}
+
+header a {
+  color:#fff;
+  line-height:1.5em;
+}
+
+header h1 a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:300;
+  padding-left:28px;
+}
