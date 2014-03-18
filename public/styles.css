@@ -1,3 +1,11 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+    padding-right:5px;
+  }
+
 body{
   margin:0;
 }
@@ -67,4 +75,33 @@ header h1 a{
 
 .CodeMirror{
   font-family:'Inconsalata'
+}
+
+footer{
+  background:#333;
+  position:fixed;
+  bottom:0;
+  z-index:999;
+  width:100%;
+  padding:5px 28px;
+}
+
+footer:after{
+  content:'';
+  display:table;
+  clear:both;
+}
+
+.left{
+  float:left;
+}
+
+.right{
+  float:right;
+}
+
+footer, footer a {
+  color:#999;
+  box-sizing:border-box;
+  text-decoration:none;
 }
