@@ -64,3 +64,7 @@ header h1 a{
   font-weight:300;
   padding-left:28px;
 }
+
+.CodeMirror{
+  font-family:'Inconsalata'
+}
