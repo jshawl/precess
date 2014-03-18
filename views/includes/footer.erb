@@ -1,21 +1,33 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <link rel="stylesheet" href="/lib/codemirror.css">
+<link rel='stylesheet' href="/addon/fold/foldgutter.css" />
 <script src="/lib/codemirror.js"></script>
-<script src="/mode/sass/sass.js"></script>
+<script src="/addon/fold/foldcode.js"></script>
+<script src="/addon/fold/foldgutter.js"></script>
+<script src='/addon/edit/matchbrackets.js'></script>
+<script src="/addon/fold/brace-fold.js"></script>
+<script src="/addon/fold/comment-fold.js"></script>
 <script src="/mode/css/css.js"></script>
 <script>
     var myTextarea = document.querySelector('.js-sass');
     var editor = CodeMirror.fromTextArea(myTextarea, {
       matchBrackets: true,
       mode: "text/x-scss",
-      lineNumbers:true
+      lineNumbers:true,
+      lineWrapping: true,
+      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+      foldGutter: true
     });
+    editor.foldCode(CodeMirror.Pos(0, 0));
     var css = document.querySelector('.js-css');
     var csseditor = CodeMirror.fromTextArea(css, {
       mode: "css",
       readOnly: true,
-      lineNumbers:true
+      lineNumbers:true,
+      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+      foldGutter: true
     });
+    csseditor.foldCode(CodeMirror.Pos(0, 0));
     var timer;
     editor.on('change', function(cm){
       clearTimeout(timer);

@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sass'
-set :environment, :production
 
 get '/' do
   erb :index

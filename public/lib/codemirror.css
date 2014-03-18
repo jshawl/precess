@@ -122,7 +122,7 @@ html,body{
 .cm-s-default .cm-error {color: #f00;}
 .cm-invalidchar {color: #f00;}
 
-div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
+div.CodeMirror span.CodeMirror-matchingbracket { border-bottom :1px solid #333; }
 div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 .CodeMirror-activeline-background {background: #e8f2ff;}
 
