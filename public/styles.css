@@ -61,6 +61,10 @@ header nav a {
   margin-right:28px;
 }
 
+header nav li{
+  display:inline-block;
+}
+
 header a {
   color:#fff;
   line-height:1.5em;

@@ -48,7 +48,6 @@
       }, 1000);
     });
     $('.js-save').on('click', function( event ){
-      event.preventDefault(); 
       var data = editor.getValue();
       window.location.hash = btoa(data);
     });
