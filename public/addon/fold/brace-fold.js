@@ -1,6 +1,5 @@
 CodeMirror.registerHelper("fold", "brace", function(cm, start) {
   var line = start.line, lineText = cm.getLine(line);
-      console.log(start.line);
   var startCh, tokenType;
 
   function findOpening(openCh) {
