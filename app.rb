@@ -15,7 +15,8 @@ post '/compile' do
     })
     @css = sass.render
   rescue Sass::SyntaxError => e
-    @css = e
+    res = "Line " + e.sass_line.to_s + ": "  +  e.to_s
+    @css = res
   end
   erb :compile
 end
