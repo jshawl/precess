@@ -2,18 +2,35 @@ require 'sinatra'
 require 'sass'
 require 'rest-client'
 require 'json'
-
-#CLIENT_ID = '5cac1a56407e03f6be13'
-#CLIENT_SECRET = 'f816936b30905962b17fe826f7a60d8f2519dc30'
+require './env' if File.exists?('env.rb')
 
 CLIENT_ID = ENV['GH_BASIC_CLIENT_ID']
-puts 'CID'
-puts ENV
 CLIENT_SECRET = ENV['GH_BASIC_SECRET_ID']
+access_token = ''
+
+puts CLIENT_ID
 
 
 get '/' do
+  unless access_token.nil?
+    puts access_token
+  end
   erb :index, :locals => { :client_id => CLIENT_ID }
+end
+
+get '/create-gist' do
+  puts 'https://api.github.com/gists?access_token='+access_token
+  res = RestClient.post('https://api.github.com/gists?access_token='+ access_token,
+		         {
+			    'description' => 'from sinatra!',
+			    'public' => true,
+			    'files' => {
+			      'from-sinatra.rb' => {
+				"content"=>'this is the content'
+			      }
+			    }
+                         }.to_json
+		       ) 
 end
 
 post '/compile' do
@@ -40,4 +57,5 @@ get '/callback' do
                            :accept => :json)
   access_token = JSON.parse(result)['access_token']
   puts access_token
+  redirect to('/');
 end
