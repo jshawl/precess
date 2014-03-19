@@ -6,10 +6,11 @@ require './env' if File.exists?('env.rb')
 
 CLIENT_ID = ENV['GH_BASIC_CLIENT_ID']
 CLIENT_SECRET = ENV['GH_BASIC_SECRET_ID']
+URL = ENV['GH_URL']
 access_token = ''
 
 get '/' do
-  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token }
+  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token, :url => URL }
 end
 
 get '/logout' do
