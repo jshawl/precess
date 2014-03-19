@@ -50,17 +50,21 @@
     });
     function save( event ){
       if (event) event.preventDefault();
+      if( $('.js-view-gist') ){
+        $createGist = $('<li><a href="/create-gist" class="js-create-gist">Create Gist</a></li>');
+	$('.js-view-gist').parent().after( $createGist );
+        $('.js-view-gist').parent().remove(); 
+      }
       var data = editor.getValue();
       localStorage.setItem('data', btoa(data) );
       window.location.hash = btoa(data);
     }
-    $('.js-save').on('click', save );
     $('.js-clear').on('click', function(event){
       event.preventDefault();
       localStorage.removeItem('data');
       window.location = $(this).attr('href');
     });
-    $('.js-create-gist').on('click', function(event){
+    $(document).on('click', '.js-create-gist', function(event){
         event.preventDefault();
         $.ajax({
 	  type: "POST",
@@ -73,7 +77,7 @@
 	  var reply = JSON.parse(res);
 	  console.log( reply.html_url );
 	  $('.js-create-gist').attr('href', reply.html_url);
-	  $viewGist = $('<li><a href="'+ reply.html_url +'"> View Gist </a></li>');
+	  $viewGist = $('<li><a class="js-view-gist" href="'+ reply.html_url +'"> View Gist </a></li>');
 	  $('.js-create-gist').parent().after( $viewGist );
 	  $('.js-create-gist').remove();
         });
