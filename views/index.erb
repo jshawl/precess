@@ -12,6 +12,7 @@
         <ul>
 	  <% if access_token != '' %>
 	    <li><a href='/create-gist' class='js-create-gist'>Create Gist</a></li>
+	    <li><a href='/logout' class='js-clear'>Log Out</a></li>
 	  <% else %>
 	    <li><a href='https://github.com/login/oauth/authorize?redirect_uri=http://localhost:4567/callback&scope=gist&client_id=<%= client_id %>' class=''>Login with GitHub</a></li>
 	  <% end %>

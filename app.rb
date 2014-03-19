@@ -12,6 +12,11 @@ get '/' do
   erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token }
 end
 
+get '/logout' do
+  access_token = ''
+  redirect to('/')
+end
+
 post '/create-gist' do
   input_name = 'sasscade-input-' + Time.now.to_i.to_s + '.scss'
   output_name = 'sasscade-output-' + Time.now.to_i.to_s + '.css'
