@@ -69,3 +69,750 @@ I, [2014-03-19T22:19:24.953717 #2048]  INFO -- : worker=0 ready
 50.200.196.50 - - [19/Mar/2014 22:21:24] "GET / HTTP/1.0" 200 4443 0.0031
 50.200.196.50 - - [19/Mar/2014 22:21:26] "POST /compile HTTP/1.0" 200 20 0.0037
 50.200.196.50 - - [19/Mar/2014 22:21:28] "POST /create-gist HTTP/1.0" 200 3163 0.1748
+I, [2014-03-19T22:22:07.856025 #2045]  INFO -- : reaped #<Process::Status: pid 2048 exit 0> worker=0
+I, [2014-03-19T22:22:07.856185 #2045]  INFO -- : reaped #<Process::Status: pid 2050 exit 0> worker=1
+I, [2014-03-19T22:22:07.856292 #2045]  INFO -- : master complete
+I, [2014-03-19T22:22:12.402786 #2107]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:22:12.403172 #2107]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:22:12.403350 #2107]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:22:12.408560 #2107]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:22:12.409186 #2107]  INFO -- : master process ready
+I, [2014-03-19T22:22:12.417061 #2110]  INFO -- : worker=0 spawned pid=2110
+I, [2014-03-19T22:22:12.417370 #2110]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:22:12.422441 #2112]  INFO -- : worker=1 spawned pid=2112
+I, [2014-03-19T22:22:12.422693 #2112]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:22:13.689745 #2110]  INFO -- : worker=0 ready
+I, [2014-03-19T22:22:13.696589 #2112]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:22:14] "GET / HTTP/1.0" 200 4484 0.0076
+50.200.196.50 - - [19/Mar/2014 22:22:15] "POST /compile HTTP/1.0" 200 20 0.0074
+50.200.196.50 - - [19/Mar/2014 22:22:17] "GET /callback?code=1a8d2644bad66edb73ed HTTP/1.0" 302 - 0.0561
+50.200.196.50 - - [19/Mar/2014 22:22:17] "GET / HTTP/1.0" 200 4484 0.0048
+50.200.196.50 - - [19/Mar/2014 22:22:18] "POST /compile HTTP/1.0" 200 20 0.0038
+50.200.196.50 - - [19/Mar/2014 22:22:25] "GET / HTTP/1.0" 200 4484 0.0014
+50.200.196.50 - - [19/Mar/2014 22:22:26] "POST /compile HTTP/1.0" 200 20 0.0031
+50.200.196.50 - - [19/Mar/2014 22:22:27] "GET / HTTP/1.0" 200 4443 0.0021
+50.200.196.50 - - [19/Mar/2014 22:22:28] "POST /compile HTTP/1.0" 200 20 0.0027
+RestClient::Unauthorized - 401 Unauthorized:
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/abstract_response.rb:48:in `return!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:230:in `process_result'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:178:in `block in transmit'
+	/usr/local/lib/ruby/2.0.0/net/http.rb:852:in `start'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:172:in `transmit'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:64:in `execute'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:33:in `execute'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient.rb:72:in `post'
+	/var/www/precess.co/app.rb:24:in `block in <top (required)>'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `block in compile!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `[]'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (3 levels) in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:966:in `route_eval'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (2 levels) in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:987:in `block in process_route'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `process_route'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:948:in `block in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `each'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1059:in `block in dispatch!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1056:in `dispatch!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `block in call!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `call!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:870:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/xss_header.rb:18:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/json_csrf.rb:18:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/frame_options.rb:31:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/logger.rb:15:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/commonlogger.rb:33:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:212:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:205:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/head.rb:9:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:175:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1949:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `block in call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1726:in `synchronize'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:572:in `process_client'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:666:in `worker_loop'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:521:in `spawn_missing_workers'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:140:in `start'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/bin/unicorn:126:in `<top (required)>'
+	/usr/local/bin/unicorn:23:in `load'
+	/usr/local/bin/unicorn:23:in `<main>'
+50.200.196.50 - - [19/Mar/2014 22:22:30] "POST /create-gist HTTP/1.0" 500 30 0.0518
+50.200.196.50 - - [19/Mar/2014 22:22:40] "GET / HTTP/1.0" 200 4443 0.0018
+50.200.196.50 - - [19/Mar/2014 22:22:41] "POST /compile HTTP/1.0" 200 20 0.0031
+50.200.196.50 - - [19/Mar/2014 22:22:43] "GET / HTTP/1.0" 200 4484 0.0014
+50.200.196.50 - - [19/Mar/2014 22:22:44] "POST /compile HTTP/1.0" 200 20 0.0030
+50.200.196.50 - - [19/Mar/2014 22:22:44] "GET / HTTP/1.0" 200 4443 0.0020
+50.200.196.50 - - [19/Mar/2014 22:22:46] "POST /compile HTTP/1.0" 200 20 0.0025
+50.200.196.50 - - [19/Mar/2014 22:22:46] "GET / HTTP/1.0" 200 4484 0.0021
+50.200.196.50 - - [19/Mar/2014 22:22:47] "POST /compile HTTP/1.0" 200 20 0.0031
+50.200.196.50 - - [19/Mar/2014 22:22:48] "GET / HTTP/1.0" 200 4443 0.0018
+50.200.196.50 - - [19/Mar/2014 22:22:50] "GET / HTTP/1.0" 200 4443 0.0015
+50.200.196.50 - - [19/Mar/2014 22:22:50] "GET / HTTP/1.0" 200 4484 0.0021
+50.200.196.50 - - [19/Mar/2014 22:22:52] "POST /compile HTTP/1.0" 200 20 0.0024
+50.200.196.50 - - [19/Mar/2014 22:22:53] "GET /callback?code=5c661695c96819761dfb HTTP/1.0" 302 - 0.0591
+50.200.196.50 - - [19/Mar/2014 22:22:53] "GET / HTTP/1.0" 200 4443 0.0026
+50.200.196.50 - - [19/Mar/2014 22:22:54] "POST /compile HTTP/1.0" 200 20 0.0036
+50.200.196.50 - - [19/Mar/2014 22:22:56] "POST /create-gist HTTP/1.0" 200 3158 0.1881
+50.200.196.50 - - [19/Mar/2014 22:23:06] "GET / HTTP/1.0" 200 4443 0.0014
+50.200.196.50 - - [19/Mar/2014 22:23:12] "GET /logout HTTP/1.0" 302 - 0.0009
+50.200.196.50 - - [19/Mar/2014 22:23:12] "GET / HTTP/1.0" 200 4443 0.0017
+50.200.196.50 - - [19/Mar/2014 22:23:15] "GET /logout HTTP/1.0" 302 - 0.0011
+50.200.196.50 - - [19/Mar/2014 22:23:15] "GET / HTTP/1.0" 200 4484 0.0028
+50.200.196.50 - - [19/Mar/2014 22:23:22] "POST /compile HTTP/1.0" 200 19 0.0031
+50.200.196.50 - - [19/Mar/2014 22:23:24] "GET /callback?code=36f32f939ecd6fe8342c HTTP/1.0" 302 - 0.0599
+50.200.196.50 - - [19/Mar/2014 22:23:24] "GET / HTTP/1.0" 200 4443 0.0025
+50.200.196.50 - - [19/Mar/2014 22:23:25] "POST /compile HTTP/1.0" 200 19 0.0023
+50.200.196.50 - - [19/Mar/2014 22:23:27] "POST /create-gist HTTP/1.0" 200 3155 0.2357
+I, [2014-03-19T22:23:58.259896 #2107]  INFO -- : reaped #<Process::Status: pid 2110 exit 0> worker=0
+I, [2014-03-19T22:23:58.260133 #2107]  INFO -- : reaped #<Process::Status: pid 2112 exit 0> worker=1
+I, [2014-03-19T22:23:58.260241 #2107]  INFO -- : master complete
+I, [2014-03-19T22:24:00.646865 #2143]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:24:00.647248 #2143]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:24:00.647414 #2143]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:24:00.651726 #2143]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:24:00.653991 #2143]  INFO -- : master process ready
+I, [2014-03-19T22:24:00.660968 #2146]  INFO -- : worker=0 spawned pid=2146
+I, [2014-03-19T22:24:00.661224 #2146]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:24:00.667379 #2148]  INFO -- : worker=1 spawned pid=2148
+I, [2014-03-19T22:24:00.667686 #2148]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:24:02.147820 #2146]  INFO -- : worker=0 ready
+I, [2014-03-19T22:24:02.158704 #2148]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:24:07] "GET / HTTP/1.0" 200 4484 0.0114
+50.200.196.50 - - [19/Mar/2014 22:24:08] "GET /favicon.ico HTTP/1.0" 404 18 0.0050
+50.200.196.50 - - [19/Mar/2014 22:24:09] "GET / HTTP/1.0" 200 4484 0.0025
+50.200.196.50 - - [19/Mar/2014 22:24:17] "POST /compile HTTP/1.0" 200 22 0.0049
+50.200.196.50 - - [19/Mar/2014 22:24:40] "GET /callback?code=ddc89948c52aff7f12bb HTTP/1.0" 302 - 0.0605
+50.200.196.50 - - [19/Mar/2014 22:24:40] "GET / HTTP/1.0" 200 4484 0.0017
+50.200.196.50 - - [19/Mar/2014 22:24:41] "POST /compile HTTP/1.0" 200 22 0.0025
+50.200.196.50 - - [19/Mar/2014 22:24:47] "GET / HTTP/1.0" 200 4443 0.0081
+50.200.196.50 - - [19/Mar/2014 22:24:48] "POST /compile HTTP/1.0" 200 22 0.0035
+50.200.196.50 - - [19/Mar/2014 22:25:02] "GET /logout HTTP/1.0" 302 - 0.0009
+50.200.196.50 - - [19/Mar/2014 22:25:02] "GET / HTTP/1.0" 200 4484 0.0020
+50.200.196.50 - - [19/Mar/2014 22:25:11] "POST /compile HTTP/1.0" 200 22 0.0036
+50.200.196.50 - - [19/Mar/2014 22:25:12] "GET /callback?code=acb023a38c203fb52277 HTTP/1.0" 302 - 0.0552
+50.200.196.50 - - [19/Mar/2014 22:25:12] "GET / HTTP/1.0" 200 4484 0.0018
+50.200.196.50 - - [19/Mar/2014 22:25:14] "POST /compile HTTP/1.0" 200 22 0.0024
+50.200.196.50 - - [19/Mar/2014 22:25:19] "GET / HTTP/1.0" 200 4443 0.0027
+50.200.196.50 - - [19/Mar/2014 22:25:20] "POST /compile HTTP/1.0" 200 22 0.0023
+50.200.196.50 - - [19/Mar/2014 22:25:23] "POST /create-gist HTTP/1.0" 200 3160 0.1974
+50.200.196.50 - - [19/Mar/2014 22:25:56] "GET / HTTP/1.0" 200 4484 0.0018
+50.200.196.50 - - [19/Mar/2014 22:25:57] "GET / HTTP/1.0" 200 4484 0.0013
+50.200.196.50 - - [19/Mar/2014 22:25:58] "POST /compile HTTP/1.0" 200 22 0.0038
+I, [2014-03-19T22:26:01.793309 #2143]  INFO -- : reaped #<Process::Status: pid 2146 exit 0> worker=0
+I, [2014-03-19T22:26:01.793538 #2143]  INFO -- : reaped #<Process::Status: pid 2148 exit 0> worker=1
+I, [2014-03-19T22:26:01.793702 #2143]  INFO -- : master complete
+I, [2014-03-19T22:26:04.587358 #2178]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:26:04.587820 #2178]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:26:04.591590 #2178]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:26:04.592550 #2178]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:26:04.593222 #2178]  INFO -- : master process ready
+I, [2014-03-19T22:26:04.601155 #2181]  INFO -- : worker=0 spawned pid=2181
+I, [2014-03-19T22:26:04.601483 #2181]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:26:04.610644 #2183]  INFO -- : worker=1 spawned pid=2183
+I, [2014-03-19T22:26:04.610947 #2183]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:26:06.051273 #2181]  INFO -- : worker=0 ready
+I, [2014-03-19T22:26:06.054692 #2183]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:26:06] "GET / HTTP/1.0" 200 4483 0.0079
+50.200.196.50 - - [19/Mar/2014 22:26:07] "POST /compile HTTP/1.0" 200 22 0.0092
+50.200.196.50 - - [19/Mar/2014 22:26:08] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:26:09] "POST /compile HTTP/1.0" 200 22 0.0045
+50.200.196.50 - - [19/Mar/2014 22:26:11] "GET /callback?code=027e1fce268a1dafe3f4 HTTP/1.0" 302 - 0.0555
+50.200.196.50 - - [19/Mar/2014 22:26:11] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:26:12] "POST /compile HTTP/1.0" 200 22 0.0027
+50.200.196.50 - - [19/Mar/2014 22:26:23] "GET / HTTP/1.0" 200 4442 0.0081
+50.200.196.50 - - [19/Mar/2014 22:26:24] "POST /compile HTTP/1.0" 200 19 0.0035
+50.200.196.50 - - [19/Mar/2014 22:26:27] "GET / HTTP/1.0" 200 4442 0.0021
+50.200.196.50 - - [19/Mar/2014 22:26:28] "POST /compile HTTP/1.0" 200 19 0.0043
+50.200.196.50 - - [19/Mar/2014 22:26:30] "GET /logout HTTP/1.0" 302 - 0.0015
+50.200.196.50 - - [19/Mar/2014 22:26:30] "GET / HTTP/1.0" 200 4483 0.0024
+50.200.196.50 - - [19/Mar/2014 22:26:31] "GET / HTTP/1.0" 200 4483 0.0028
+50.200.196.50 - - [19/Mar/2014 22:26:37] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:26:38] "POST /compile HTTP/1.0" 200 54 0.0031
+50.200.196.50 - - [19/Mar/2014 22:26:40] "GET /callback?code=e2c83a88ceab7c88d474 HTTP/1.0" 302 - 0.0562
+50.200.196.50 - - [19/Mar/2014 22:26:40] "GET / HTTP/1.0" 200 4483 0.0017
+50.200.196.50 - - [19/Mar/2014 22:26:42] "POST /compile HTTP/1.0" 200 54 0.0047
+50.200.196.50 - - [19/Mar/2014 22:26:47] "GET / HTTP/1.0" 200 4442 0.0013
+50.200.196.50 - - [19/Mar/2014 22:26:48] "POST /compile HTTP/1.0" 200 54 0.0030
+50.200.196.50 - - [19/Mar/2014 22:26:49] "GET /logout HTTP/1.0" 302 - 0.0015
+50.200.196.50 - - [19/Mar/2014 22:26:49] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:26:50] "GET / HTTP/1.0" 200 4442 0.0019
+50.200.196.50 - - [19/Mar/2014 22:26:53] "POST /compile HTTP/1.0" 200 54 0.0030
+50.200.196.50 - - [19/Mar/2014 22:26:54] "GET / HTTP/1.0" 200 4442 0.0023
+50.200.196.50 - - [19/Mar/2014 22:26:55] "POST /compile HTTP/1.0" 200 54 0.0029
+50.200.196.50 - - [19/Mar/2014 22:26:55] "GET / HTTP/1.0" 200 4483 0.0024
+50.200.196.50 - - [19/Mar/2014 22:26:56] "POST /compile HTTP/1.0" 200 54 0.0035
+50.200.196.50 - - [19/Mar/2014 22:27:12] "GET /callback?code=7430b8e878e2f9dddfe3 HTTP/1.0" 302 - 0.0567
+50.200.196.50 - - [19/Mar/2014 22:27:12] "GET / HTTP/1.0" 200 4483 0.0027
+50.200.196.50 - - [19/Mar/2014 22:27:13] "POST /compile HTTP/1.0" 200 54 0.0040
+50.200.196.50 - - [19/Mar/2014 22:27:17] "GET / HTTP/1.0" 200 4442 0.0018
+50.200.196.50 - - [19/Mar/2014 22:27:19] "POST /compile HTTP/1.0" 200 54 0.0052
+50.200.196.50 - - [19/Mar/2014 22:27:28] "GET / HTTP/1.0" 200 4483 0.0014
+50.200.196.50 - - [19/Mar/2014 22:27:33] "GET /callback?code=c6a5288abcdff7cc9a52 HTTP/1.0" 302 - 0.0552
+50.200.196.50 - - [19/Mar/2014 22:27:33] "GET / HTTP/1.0" 200 4442 0.0018
+50.200.196.50 - - [19/Mar/2014 22:27:36] "GET /logout HTTP/1.0" 302 - 0.0015
+50.200.196.50 - - [19/Mar/2014 22:27:37] "GET / HTTP/1.0" 200 4442 0.0019
+50.200.196.50 - - [19/Mar/2014 22:27:40] "GET /logout HTTP/1.0" 302 - 0.0013
+50.200.196.50 - - [19/Mar/2014 22:27:40] "GET / HTTP/1.0" 200 4442 0.0026
+50.200.196.50 - - [19/Mar/2014 22:27:42] "GET /logout HTTP/1.0" 302 - 0.0010
+50.200.196.50 - - [19/Mar/2014 22:27:42] "GET / HTTP/1.0" 200 4483 0.0021
+50.200.196.50 - - [19/Mar/2014 22:27:46] "GET / HTTP/1.0" 200 4442 0.0027
+50.200.196.50 - - [19/Mar/2014 22:27:47] "GET / HTTP/1.0" 200 4483 0.0019
+50.200.196.50 - - [19/Mar/2014 22:27:48] "GET / HTTP/1.0" 200 4442 0.0013
+50.200.196.50 - - [19/Mar/2014 22:27:48] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:27:49] "GET / HTTP/1.0" 200 4442 0.0016
+50.200.196.50 - - [19/Mar/2014 22:27:50] "GET / HTTP/1.0" 200 4483 0.0014
+50.200.196.50 - - [19/Mar/2014 22:27:51] "GET / HTTP/1.0" 200 4442 0.0018
+50.200.196.50 - - [19/Mar/2014 22:27:51] "GET / HTTP/1.0" 200 4483 0.0018
+50.200.196.50 - - [19/Mar/2014 22:27:52] "GET / HTTP/1.0" 200 4442 0.0014
+50.200.196.50 - - [19/Mar/2014 22:27:53] "GET / HTTP/1.0" 200 4483 0.0013
+50.200.196.50 - - [19/Mar/2014 22:27:54] "GET / HTTP/1.0" 200 4442 0.0021
+50.200.196.50 - - [19/Mar/2014 22:27:55] "GET / HTTP/1.0" 200 4483 0.0017
+50.200.196.50 - - [19/Mar/2014 22:27:56] "GET / HTTP/1.0" 200 4442 0.0019
+50.200.196.50 - - [19/Mar/2014 22:27:59] "GET / HTTP/1.0" 200 4483 0.0019
+50.200.196.50 - - [19/Mar/2014 22:28:00] "GET / HTTP/1.0" 200 4483 0.0015
+50.200.196.50 - - [19/Mar/2014 22:28:01] "GET / HTTP/1.0" 200 4442 0.0018
+50.200.196.50 - - [19/Mar/2014 22:28:02] "GET / HTTP/1.0" 200 4483 0.0023
+50.200.196.50 - - [19/Mar/2014 22:28:02] "GET / HTTP/1.0" 200 4442 0.0036
+50.200.196.50 - - [19/Mar/2014 22:28:03] "GET / HTTP/1.0" 200 4483 0.0024
+50.200.196.50 - - [19/Mar/2014 22:28:03] "GET / HTTP/1.0" 200 4442 0.0024
+I, [2014-03-19T22:28:34.912729 #2178]  INFO -- : reaped #<Process::Status: pid 2181 exit 0> worker=0
+I, [2014-03-19T22:28:34.913014 #2178]  INFO -- : reaped #<Process::Status: pid 2183 exit 0> worker=1
+I, [2014-03-19T22:28:34.913253 #2178]  INFO -- : master complete
+I, [2014-03-19T22:28:59.990961 #2215]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:28:59.991348 #2215]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:28:59.991549 #2215]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:28:59.995078 #2215]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:28:59.996684 #2218]  INFO -- : worker=0 spawned pid=2218
+I, [2014-03-19T22:28:59.996961 #2218]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:29:00.000735 #2215]  INFO -- : master process ready
+I, [2014-03-19T22:29:00.009871 #2221]  INFO -- : worker=1 spawned pid=2221
+I, [2014-03-19T22:29:00.010146 #2221]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:29:01.272466 #2221]  INFO -- : worker=1 ready
+I, [2014-03-19T22:29:01.303378 #2218]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:29:01] "GET / HTTP/1.0" 200 4483 0.0399
+50.200.196.50 - - [19/Mar/2014 22:29:05] "GET /callback?code=3d85badde7413a2c7578 HTTP/1.0" 302 - 0.0743
+50.200.196.50 - - [19/Mar/2014 22:29:05] "GET / HTTP/1.0" 200 4483 0.0084
+50.200.196.50 - - [19/Mar/2014 22:29:07] "GET / HTTP/1.0" 200 4442 0.0062
+50.200.196.50 - - [19/Mar/2014 22:29:08] "GET / HTTP/1.0" 200 4483 0.0070
+50.200.196.50 - - [19/Mar/2014 22:29:09] "GET / HTTP/1.0" 200 4442 0.0062
+50.200.196.50 - - [19/Mar/2014 22:29:09] "GET / HTTP/1.0" 200 4483 0.0078
+50.200.196.50 - - [19/Mar/2014 22:29:10] "GET / HTTP/1.0" 200 4442 0.0092
+50.200.196.50 - - [19/Mar/2014 22:29:11] "GET / HTTP/1.0" 200 4483 0.0065
+50.200.196.50 - - [19/Mar/2014 22:29:11] "GET / HTTP/1.0" 200 4442 0.0097
+50.200.196.50 - - [19/Mar/2014 22:29:12] "GET / HTTP/1.0" 200 4483 0.0085
+50.200.196.50 - - [19/Mar/2014 22:29:13] "GET / HTTP/1.0" 200 4442 0.0064
+50.200.196.50 - - [19/Mar/2014 22:29:14] "GET / HTTP/1.0" 200 4483 0.0099
+50.200.196.50 - - [19/Mar/2014 22:29:14] "GET / HTTP/1.0" 200 4442 0.0078
+50.200.196.50 - - [19/Mar/2014 22:29:15] "GET / HTTP/1.0" 200 4483 0.0377
+50.200.196.50 - - [19/Mar/2014 22:29:16] "GET / HTTP/1.0" 200 4442 0.0292
+RestClient::Unauthorized - 401 Unauthorized:
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/abstract_response.rb:48:in `return!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:230:in `process_result'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:178:in `block in transmit'
+	/usr/local/lib/ruby/2.0.0/net/http.rb:852:in `start'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:172:in `transmit'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:64:in `execute'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient/request.rb:33:in `execute'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rest-client-1.6.7/lib/restclient.rb:72:in `post'
+	/var/www/precess.co/app.rb:24:in `block in <top (required)>'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1541:in `block in compile!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `[]'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (3 levels) in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:966:in `route_eval'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:950:in `block (2 levels) in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:987:in `block in process_route'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:985:in `process_route'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:948:in `block in route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `each'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:947:in `route!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1059:in `block in dispatch!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1056:in `dispatch!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `block in call!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `block in invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `catch'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1041:in `invoke'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:882:in `call!'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:870:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/xss_header.rb:18:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/json_csrf.rb:18:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/base.rb:49:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-protection-1.5.0/lib/rack/protection/frame_options.rb:31:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/logger.rb:15:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:205:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/head.rb:9:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/showexceptions.rb:21:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:175:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1949:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `block in call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1726:in `synchronize'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:1449:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/lint.rb:48:in `_call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/lint.rb:36:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/showexceptions.rb:24:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/commonlogger.rb:33:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/sinatra-1.4.3/lib/sinatra/base.rb:212:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/chunked.rb:43:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:572:in `process_client'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:666:in `worker_loop'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:521:in `spawn_missing_workers'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:140:in `start'
+	/usr/local/lib/ruby/gems/2.0.0/gems/unicorn-4.8.2/bin/unicorn:126:in `<top (required)>'
+	/usr/local/bin/unicorn:23:in `load'
+	/usr/local/bin/unicorn:23:in `<main>'
+50.200.196.50 - - [19/Mar/2014 22:29:17] "POST /create-gist HTTP/1.0" 500 171263 0.1001
+50.200.196.50 - - [19/Mar/2014 22:29:21] "GET / HTTP/1.0" 200 4442 0.0110
+50.200.196.50 - - [19/Mar/2014 22:29:22] "GET / HTTP/1.0" 200 4483 0.0097
+50.200.196.50 - - [19/Mar/2014 22:29:23] "GET / HTTP/1.0" 200 4442 0.0075
+50.200.196.50 - - [19/Mar/2014 22:29:24] "GET / HTTP/1.0" 200 4483 0.0337
+50.200.196.50 - - [19/Mar/2014 22:29:24] "GET / HTTP/1.0" 200 4442 0.0108
+50.200.196.50 - - [19/Mar/2014 22:29:25] "GET / HTTP/1.0" 200 4483 0.0101
+50.200.196.50 - - [19/Mar/2014 22:29:26] "GET / HTTP/1.0" 200 4442 0.0084
+50.200.196.50 - - [19/Mar/2014 22:29:29] "GET / HTTP/1.0" 200 4483 0.0111
+50.200.196.50 - - [19/Mar/2014 22:29:32] "GET / HTTP/1.0" 200 4442 0.0104
+50.200.196.50 - - [19/Mar/2014 22:29:33] "GET / HTTP/1.0" 200 4483 0.0101
+50.200.196.50 - - [19/Mar/2014 22:29:34] "GET / HTTP/1.0" 200 4442 0.0098
+50.200.196.50 - - [19/Mar/2014 22:29:35] "GET / HTTP/1.0" 200 4483 0.0096
+50.200.196.50 - - [19/Mar/2014 22:29:35] "GET / HTTP/1.0" 200 4442 0.0065
+50.200.196.50 - - [19/Mar/2014 22:29:36] "GET / HTTP/1.0" 200 4483 0.0091
+50.200.196.50 - - [19/Mar/2014 22:29:36] "GET / HTTP/1.0" 200 4442 0.0074
+50.200.196.50 - - [19/Mar/2014 22:29:37] "GET / HTTP/1.0" 200 4483 0.0069
+50.200.196.50 - - [19/Mar/2014 22:29:37] "GET / HTTP/1.0" 200 4442 0.0067
+50.200.196.50 - - [19/Mar/2014 22:29:38] "GET / HTTP/1.0" 200 4483 0.0070
+50.200.196.50 - - [19/Mar/2014 22:29:38] "GET / HTTP/1.0" 200 4442 0.0073
+50.200.196.50 - - [19/Mar/2014 22:29:39] "GET / HTTP/1.0" 200 4483 0.0067
+50.200.196.50 - - [19/Mar/2014 22:29:39] "GET / HTTP/1.0" 200 4442 0.0072
+50.200.196.50 - - [19/Mar/2014 22:29:39] "GET / HTTP/1.0" 200 4483 0.0067
+50.200.196.50 - - [19/Mar/2014 22:29:40] "GET / HTTP/1.0" 200 4442 0.0090
+50.200.196.50 - - [19/Mar/2014 22:29:40] "GET / HTTP/1.0" 200 4483 0.0073
+50.200.196.50 - - [19/Mar/2014 22:29:40] "GET / HTTP/1.0" 200 4442 0.0074
+50.200.196.50 - - [19/Mar/2014 22:29:41] "GET / HTTP/1.0" 200 4483 0.0075
+50.200.196.50 - - [19/Mar/2014 22:29:41] "GET / HTTP/1.0" 200 4442 0.0073
+50.200.196.50 - - [19/Mar/2014 22:29:42] "GET / HTTP/1.0" 200 4483 0.0106
+50.200.196.50 - - [19/Mar/2014 22:29:42] "GET / HTTP/1.0" 200 4442 0.0070
+50.200.196.50 - - [19/Mar/2014 22:30:16] "GET / HTTP/1.0" 200 4483 0.0071
+50.200.196.50 - - [19/Mar/2014 22:30:22] "GET / HTTP/1.0" 200 4442 0.0083
+50.200.196.50 - - [19/Mar/2014 22:30:23] "GET / HTTP/1.0" 200 4483 0.0404
+50.200.196.50 - - [19/Mar/2014 22:30:24] "POST /compile HTTP/1.0" 200 20 0.0100
+50.200.196.50 - - [19/Mar/2014 22:30:28] "GET / HTTP/1.0" 200 4483 0.0090
+50.200.196.50 - - [19/Mar/2014 22:30:28] "GET / HTTP/1.0" 200 4442 0.0071
+50.200.196.50 - - [19/Mar/2014 22:30:29] "GET / HTTP/1.0" 200 4483 0.0071
+50.200.196.50 - - [19/Mar/2014 22:30:30] "POST /compile HTTP/1.0" 200 20 0.0048
+50.200.196.50 - - [19/Mar/2014 22:30:37] "GET /callback?code=a4a1add2f75e2b495391 HTTP/1.0" 302 - 0.0589
+50.200.196.50 - - [19/Mar/2014 22:30:37] "GET / HTTP/1.0" 200 4442 0.0079
+50.200.196.50 - - [19/Mar/2014 22:30:38] "POST /compile HTTP/1.0" 200 20 0.0067
+50.200.196.50 - - [19/Mar/2014 22:30:40] "GET /logout HTTP/1.0" 302 - 0.0031
+50.200.196.50 - - [19/Mar/2014 22:30:40] "GET / HTTP/1.0" 200 4442 0.0111
+50.200.196.50 - - [19/Mar/2014 22:30:43] "GET / HTTP/1.0" 200 4483 0.0070
+50.200.196.50 - - [19/Mar/2014 22:30:44] "GET / HTTP/1.0" 200 4442 0.0064
+50.200.196.50 - - [19/Mar/2014 22:30:45] "GET / HTTP/1.0" 200 4483 0.0067
+50.200.196.50 - - [19/Mar/2014 22:31:45] "GET / HTTP/1.0" 200 4486 0.0067
+50.200.196.50 - - [19/Mar/2014 22:31:47] "GET / HTTP/1.0" 200 4487 0.0092
+50.200.196.50 - - [19/Mar/2014 22:32:15] "GET / HTTP/1.0" 200 4486 0.0075
+50.200.196.50 - - [19/Mar/2014 22:32:18] "GET /logout HTTP/1.0" 302 - 0.0021
+50.200.196.50 - - [19/Mar/2014 22:32:19] "GET / HTTP/1.0" 200 4487 0.0060
+50.200.196.50 - - [19/Mar/2014 22:32:20] "GET / HTTP/1.0" 200 4486 0.0096
+50.200.196.50 - - [19/Mar/2014 22:32:26] "GET / HTTP/1.0" 200 4487 0.0069
+50.200.196.50 - - [19/Mar/2014 22:32:27] "GET / HTTP/1.0" 200 4486 0.0088
+I, [2014-03-19T22:33:52.559679 #2215]  INFO -- : reaped #<Process::Status: pid 2218 exit 0> worker=0
+I, [2014-03-19T22:33:52.559851 #2215]  INFO -- : reaped #<Process::Status: pid 2221 exit 0> worker=1
+I, [2014-03-19T22:33:52.559958 #2215]  INFO -- : master complete
+I, [2014-03-19T22:34:08.539255 #2326]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:34:08.539655 #2326]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:34:08.539847 #2326]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:34:08.544147 #2326]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:34:08.545043 #2326]  INFO -- : master process ready
+I, [2014-03-19T22:34:08.553254 #2329]  INFO -- : worker=0 spawned pid=2329
+I, [2014-03-19T22:34:08.553572 #2329]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:34:08.560768 #2331]  INFO -- : worker=1 spawned pid=2331
+I, [2014-03-19T22:34:08.561059 #2331]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:34:10.024074 #2329]  INFO -- : worker=0 ready
+I, [2014-03-19T22:34:10.026376 #2331]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:34:10] "GET / HTTP/1.0" 200 4487 0.0200
+50.200.196.50 - - [19/Mar/2014 22:34:11] "GET / HTTP/1.0" 200 4487 0.0173
+50.200.196.50 - - [19/Mar/2014 22:34:11] "GET / HTTP/1.0" 200 4487 0.0100
+50.200.196.50 - - [19/Mar/2014 22:34:12] "GET / HTTP/1.0" 200 4487 0.0094
+50.200.196.50 - - [19/Mar/2014 22:34:13] "GET / HTTP/1.0" 200 4487 0.0096
+50.200.196.50 - - [19/Mar/2014 22:34:13] "GET / HTTP/1.0" 200 4487 0.0082
+50.200.196.50 - - [19/Mar/2014 22:34:14] "GET / HTTP/1.0" 200 4487 0.0122
+50.200.196.50 - - [19/Mar/2014 22:34:15] "GET / HTTP/1.0" 200 4487 0.0076
+50.200.196.50 - - [19/Mar/2014 22:34:15] "GET / HTTP/1.0" 200 4487 0.0082
+50.200.196.50 - - [19/Mar/2014 22:34:16] "GET / HTTP/1.0" 200 4487 0.0068
+50.200.196.50 - - [19/Mar/2014 22:34:49] "POST /compile HTTP/1.0" 200 21 0.0068
+50.200.196.50 - - [19/Mar/2014 22:34:52] "GET /callback?code=0aded7250b14086f52b4 HTTP/1.0" 302 - 0.0604
+50.200.196.50 - - [19/Mar/2014 22:34:52] "GET / HTTP/1.0" 200 4487 0.0100
+50.200.196.50 - - [19/Mar/2014 22:34:54] "POST /compile HTTP/1.0" 200 21 0.0104
+50.200.196.50 - - [19/Mar/2014 22:34:56] "GET / HTTP/1.0" 200 4487 0.0296
+50.200.196.50 - - [19/Mar/2014 22:34:56] "GET / HTTP/1.0" 200 4486 0.0301
+50.200.196.50 - - [19/Mar/2014 22:34:58] "POST /compile HTTP/1.0" 200 21 0.0047
+50.200.196.50 - - [19/Mar/2014 22:35:00] "GET / HTTP/1.0" 200 4486 0.0100
+50.200.196.50 - - [19/Mar/2014 22:35:01] "GET / HTTP/1.0" 200 4487 0.0082
+50.200.196.50 - - [19/Mar/2014 22:35:01] "GET / HTTP/1.0" 200 4486 0.0097
+50.200.196.50 - - [19/Mar/2014 22:35:02] "GET / HTTP/1.0" 200 4487 0.0077
+50.200.196.50 - - [19/Mar/2014 22:35:03] "GET / HTTP/1.0" 200 4486 0.0114
+50.200.196.50 - - [19/Mar/2014 22:35:03] "GET / HTTP/1.0" 200 4487 0.0098
+50.200.196.50 - - [19/Mar/2014 22:35:04] "GET / HTTP/1.0" 200 4486 0.0102
+50.200.196.50 - - [19/Mar/2014 22:35:05] "GET / HTTP/1.0" 200 4487 0.0097
+50.200.196.50 - - [19/Mar/2014 22:35:06] "POST /compile HTTP/1.0" 200 21 0.0051
+I, [2014-03-19T22:35:40.084917 #2326]  INFO -- : reaped #<Process::Status: pid 2329 exit 0> worker=0
+I, [2014-03-19T22:35:40.085151 #2326]  INFO -- : reaped #<Process::Status: pid 2331 exit 0> worker=1
+I, [2014-03-19T22:35:40.085305 #2326]  INFO -- : master complete
+I, [2014-03-19T22:35:43.886306 #2356]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:35:43.886510 #2356]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=9
+I, [2014-03-19T22:35:43.886619 #2356]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:35:43.887341 #2356]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:35:43.887867 #2356]  INFO -- : master process ready
+I, [2014-03-19T22:35:43.888797 #2358]  INFO -- : worker=0 spawned pid=2358
+I, [2014-03-19T22:35:43.889015 #2358]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:35:43.892528 #2360]  INFO -- : worker=1 spawned pid=2360
+I, [2014-03-19T22:35:43.892728 #2360]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:35:45.134870 #2358]  INFO -- : worker=0 ready
+I, [2014-03-19T22:35:45.138434 #2360]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:35:47] "GET / HTTP/1.0" 200 4487 0.0233
+50.200.196.50 - - [19/Mar/2014 22:35:48] "POST /compile HTTP/1.0" 200 21 0.0237
+I, [2014-03-19T22:35:49.201747 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.242973 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.301522 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.336779 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.377292 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.394710 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.418822 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2014-03-19T22:35:49.455332 #2356]  INFO -- : SIGWINCH ignored because we're not daemonized
+50.200.196.50 - - [19/Mar/2014 22:35:51] "GET / HTTP/1.0" 200 4487 0.0090
+50.200.196.50 - - [19/Mar/2014 22:35:53] "POST /compile HTTP/1.0" 200 21 0.0059
+50.200.196.50 - - [19/Mar/2014 22:35:54] "GET / HTTP/1.0" 200 4487 0.0075
+50.200.196.50 - - [19/Mar/2014 22:35:54] "GET / HTTP/1.0" 200 4487 0.0084
+50.200.196.50 - - [19/Mar/2014 22:35:56] "POST /compile HTTP/1.0" 200 21 0.0094
+50.200.196.50 - - [19/Mar/2014 22:35:56] "GET / HTTP/1.0" 200 4487 0.0102
+50.200.196.50 - - [19/Mar/2014 22:35:58] "POST /compile HTTP/1.0" 200 21 0.0047
+50.200.196.50 - - [19/Mar/2014 22:36:00] "GET /callback?code=66da9a42e3031a22b989 HTTP/1.0" 302 - 0.0598
+50.200.196.50 - - [19/Mar/2014 22:36:00] "GET / HTTP/1.0" 200 4487 0.0099
+50.200.196.50 - - [19/Mar/2014 22:36:01] "POST /compile HTTP/1.0" 200 21 0.0064
+50.200.196.50 - - [19/Mar/2014 22:36:02] "GET / HTTP/1.0" 200 4487 0.0096
+50.200.196.50 - - [19/Mar/2014 22:36:03] "POST /compile HTTP/1.0" 200 21 0.0040
+50.200.196.50 - - [19/Mar/2014 22:36:04] "GET / HTTP/1.0" 200 4487 0.0275
+50.200.196.50 - - [19/Mar/2014 22:36:04] "GET / HTTP/1.0" 200 4486 0.0081
+50.200.196.50 - - [19/Mar/2014 22:36:06] "POST /compile HTTP/1.0" 200 21 0.0044
+50.200.196.50 - - [19/Mar/2014 22:36:13] "GET / HTTP/1.0" 200 4486 0.0088
+50.200.196.50 - - [19/Mar/2014 22:36:14] "POST /compile HTTP/1.0" 200 21 0.0046
+50.200.196.50 - - [19/Mar/2014 22:36:15] "GET / HTTP/1.0" 200 4486 0.0276
+50.200.196.50 - - [19/Mar/2014 22:36:16] "POST /compile HTTP/1.0" 200 21 0.0058
+50.200.196.50 - - [19/Mar/2014 22:36:16] "GET / HTTP/1.0" 200 4486 0.0067
+50.200.196.50 - - [19/Mar/2014 22:36:17] "POST /compile HTTP/1.0" 200 21 0.0059
+50.200.196.50 - - [19/Mar/2014 22:36:18] "GET / HTTP/1.0" 200 4486 0.0075
+50.200.196.50 - - [19/Mar/2014 22:36:19] "POST /compile HTTP/1.0" 200 21 0.0062
+50.200.196.50 - - [19/Mar/2014 22:36:19] "GET / HTTP/1.0" 200 4486 0.0092
+50.200.196.50 - - [19/Mar/2014 22:36:20] "POST /compile HTTP/1.0" 200 21 0.0055
+50.200.196.50 - - [19/Mar/2014 22:36:21] "GET /logout HTTP/1.0" 302 - 0.0019
+50.200.196.50 - - [19/Mar/2014 22:36:21] "GET / HTTP/1.0" 200 4487 0.0054
+50.200.196.50 - - [19/Mar/2014 22:36:22] "GET / HTTP/1.0" 200 4487 0.0066
+50.200.196.50 - - [19/Mar/2014 22:36:23] "GET / HTTP/1.0" 200 4487 0.0096
+50.200.196.50 - - [19/Mar/2014 22:36:24] "GET / HTTP/1.0" 200 4487 0.0070
+I, [2014-03-19T22:36:31.965089 #2356]  INFO -- : reaped #<Process::Status: pid 2358 exit 0> worker=0
+I, [2014-03-19T22:36:31.965303 #2356]  INFO -- : reaped #<Process::Status: pid 2360 exit 0> worker=1
+I, [2014-03-19T22:36:31.965469 #2356]  INFO -- : master complete
+I, [2014-03-19T22:36:36.650927 #2374]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:36:36.651310 #2374]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:36:36.651492 #2374]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:36:36.656770 #2374]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:36:36.658629 #2374]  INFO -- : master process ready
+I, [2014-03-19T22:36:36.664987 #2377]  INFO -- : worker=0 spawned pid=2377
+I, [2014-03-19T22:36:36.665267 #2377]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:36:36.674747 #2379]  INFO -- : worker=1 spawned pid=2379
+I, [2014-03-19T22:36:36.675024 #2379]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:36:37.887728 #2377]  INFO -- : worker=0 ready
+I, [2014-03-19T22:36:37.889387 #2379]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:36:37] "GET / HTTP/1.0" 200 4487 0.0135
+50.200.196.50 - - [19/Mar/2014 22:36:38] "GET / HTTP/1.0" 200 4487 0.0164
+50.200.196.50 - - [19/Mar/2014 22:36:39] "GET / HTTP/1.0" 200 4487 0.0064
+50.200.196.50 - - [19/Mar/2014 22:36:40] "GET / HTTP/1.0" 200 4487 0.0075
+50.200.196.50 - - [19/Mar/2014 22:36:41] "GET /callback?code=d1240406314cb1bb5ca5 HTTP/1.0" 302 - 0.0567
+50.200.196.50 - - [19/Mar/2014 22:36:41] "GET / HTTP/1.0" 200 4487 0.0069
+50.200.196.50 - - [19/Mar/2014 22:36:43] "GET / HTTP/1.0" 200 4486 0.0067
+50.200.196.50 - - [19/Mar/2014 22:36:44] "GET / HTTP/1.0" 200 4487 0.0066
+50.200.196.50 - - [19/Mar/2014 22:36:45] "GET / HTTP/1.0" 200 4486 0.0093
+50.200.196.50 - - [19/Mar/2014 22:36:46] "GET / HTTP/1.0" 200 4487 0.0079
+50.200.196.50 - - [19/Mar/2014 22:36:46] "GET / HTTP/1.0" 200 4486 0.0069
+50.200.196.50 - - [19/Mar/2014 22:36:47] "GET / HTTP/1.0" 200 4487 0.0070
+50.200.196.50 - - [19/Mar/2014 22:38:45] "GET / HTTP/1.0" 200 4486 0.0059
+50.200.196.50 - - [19/Mar/2014 22:38:46] "GET / HTTP/1.0" 200 4487 0.0073
+50.200.196.50 - - [19/Mar/2014 22:38:47] "GET / HTTP/1.0" 200 4486 0.0328
+50.200.196.50 - - [19/Mar/2014 22:38:48] "GET / HTTP/1.0" 200 4487 0.0267
+50.200.196.50 - - [19/Mar/2014 22:38:49] "GET / HTTP/1.0" 200 4486 0.0071
+50.200.196.50 - - [19/Mar/2014 22:38:50] "GET / HTTP/1.0" 200 4487 0.0099
+50.200.196.50 - - [19/Mar/2014 22:38:51] "GET / HTTP/1.0" 200 4486 0.0099
+50.200.196.50 - - [19/Mar/2014 22:38:52] "GET / HTTP/1.0" 200 4487 0.0072
+50.200.196.50 - - [19/Mar/2014 22:38:53] "GET / HTTP/1.0" 200 4486 0.0073
+I, [2014-03-19T22:39:18.771762 #2374]  INFO -- : reaped #<Process::Status: pid 2377 exit 0> worker=0
+I, [2014-03-19T22:39:18.772092 #2374]  INFO -- : reaped #<Process::Status: pid 2379 exit 0> worker=1
+I, [2014-03-19T22:39:18.772265 #2374]  INFO -- : master complete
+I, [2014-03-19T22:39:20.991125 #2638]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:39:20.991498 #2638]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:39:20.991692 #2638]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:39:20.995721 #2638]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:39:20.996407 #2638]  INFO -- : master process ready
+I, [2014-03-19T22:39:21.001129 #2641]  INFO -- : worker=0 spawned pid=2641
+I, [2014-03-19T22:39:21.001414 #2641]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:21.017045 #2643]  INFO -- : worker=1 spawned pid=2643
+I, [2014-03-19T22:39:21.017368 #2643]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:22.523841 #2643]  INFO -- : worker=1 ready
+I, [2014-03-19T22:39:22.530502 #2641]  INFO -- : worker=0 ready
+I, [2014-03-19T22:39:24.924155 #2638]  INFO -- : reaped #<Process::Status: pid 2641 exit 0> worker=0
+I, [2014-03-19T22:39:24.924366 #2638]  INFO -- : reaped #<Process::Status: pid 2643 exit 0> worker=1
+I, [2014-03-19T22:39:24.924552 #2638]  INFO -- : master complete
+I, [2014-03-19T22:39:28.201815 #2660]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:39:28.202052 #2660]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=9
+I, [2014-03-19T22:39:28.202174 #2660]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:39:28.202927 #2660]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:39:28.203514 #2660]  INFO -- : master process ready
+I, [2014-03-19T22:39:28.204499 #2662]  INFO -- : worker=0 spawned pid=2662
+I, [2014-03-19T22:39:28.204750 #2662]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:28.208619 #2664]  INFO -- : worker=1 spawned pid=2664
+I, [2014-03-19T22:39:28.208854 #2664]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:29.546084 #2662]  INFO -- : worker=0 ready
+I, [2014-03-19T22:39:29.547730 #2664]  INFO -- : worker=1 ready
+I, [2014-03-19T22:39:34.623643 #2660]  INFO -- : reaped #<Process::Status: pid 2662 exit 0> worker=0
+I, [2014-03-19T22:39:34.623856 #2660]  INFO -- : reaped #<Process::Status: pid 2664 exit 0> worker=1
+I, [2014-03-19T22:39:34.624074 #2660]  INFO -- : master complete
+I, [2014-03-19T22:39:56.679345 #2686]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:39:56.679763 #2686]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:39:56.679948 #2686]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:39:56.684800 #2686]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:39:56.687290 #2686]  INFO -- : master process ready
+I, [2014-03-19T22:39:56.696747 #2689]  INFO -- : worker=0 spawned pid=2689
+I, [2014-03-19T22:39:56.697040 #2689]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:56.703945 #2691]  INFO -- : worker=1 spawned pid=2691
+I, [2014-03-19T22:39:56.706391 #2691]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:39:58.178358 #2691]  INFO -- : worker=1 ready
+I, [2014-03-19T22:39:58.184942 #2689]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:40:13] "GET / HTTP/1.0" 200 4487 0.0196
+50.200.196.50 - - [19/Mar/2014 22:40:14] "GET / HTTP/1.0" 200 4487 0.0174
+50.200.196.50 - - [19/Mar/2014 22:40:26] "GET / HTTP/1.0" 200 4487 0.0067
+50.200.196.50 - - [19/Mar/2014 22:40:29] "GET / HTTP/1.0" 200 4487 0.0070
+50.200.196.50 - - [19/Mar/2014 22:40:31] "GET / HTTP/1.0" 200 4487 0.0103
+50.200.196.50 - - [19/Mar/2014 22:40:32] "GET / HTTP/1.0" 200 4487 0.0108
+50.200.196.50 - - [19/Mar/2014 22:40:33] "GET / HTTP/1.0" 200 4487 0.0075
+50.200.196.50 - - [19/Mar/2014 22:40:34] "GET / HTTP/1.0" 200 4487 0.0089
+50.200.196.50 - - [19/Mar/2014 22:40:34] "GET / HTTP/1.0" 200 4487 0.0071
+50.200.196.50 - - [19/Mar/2014 22:40:35] "GET / HTTP/1.0" 200 4487 0.0104
+50.200.196.50 - - [19/Mar/2014 22:40:36] "GET / HTTP/1.0" 200 4487 0.0073
+50.200.196.50 - - [19/Mar/2014 22:40:37] "GET /callback?code=313e194d5e7b952d9a4f HTTP/1.0" 302 - 0.0545
+50.200.196.50 - - [19/Mar/2014 22:40:37] "GET / HTTP/1.0" 200 4487 0.0068
+50.200.196.50 - - [19/Mar/2014 22:40:39] "GET / HTTP/1.0" 200 4486 0.0072
+50.200.196.50 - - [19/Mar/2014 22:40:40] "GET / HTTP/1.0" 200 4487 0.0278
+50.200.196.50 - - [19/Mar/2014 22:40:41] "GET / HTTP/1.0" 200 4486 0.0342
+50.200.196.50 - - [19/Mar/2014 22:40:41] "GET / HTTP/1.0" 200 4487 0.0079
+50.200.196.50 - - [19/Mar/2014 22:40:42] "GET / HTTP/1.0" 200 4486 0.0082
+50.200.196.50 - - [19/Mar/2014 22:40:42] "GET / HTTP/1.0" 200 4487 0.0089
+50.200.196.50 - - [19/Mar/2014 22:40:43] "GET / HTTP/1.0" 200 4486 0.0100
+50.200.196.50 - - [19/Mar/2014 22:40:44] "GET / HTTP/1.0" 200 4487 0.0106
+I, [2014-03-19T22:42:01.790964 #2686]  INFO -- : reaped #<Process::Status: pid 2689 exit 0> worker=0
+I, [2014-03-19T22:42:01.791188 #2686]  INFO -- : reaped #<Process::Status: pid 2691 exit 0> worker=1
+I, [2014-03-19T22:42:01.791340 #2686]  INFO -- : master complete
+I, [2014-03-19T22:42:26.768186 #2774]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:42:26.768795 #2774]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:42:26.769056 #2774]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:42:26.773065 #2774]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:42:26.774089 #2777]  INFO -- : worker=0 spawned pid=2777
+I, [2014-03-19T22:42:26.774398 #2777]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:42:26.779334 #2774]  INFO -- : master process ready
+I, [2014-03-19T22:42:26.785260 #2780]  INFO -- : worker=1 spawned pid=2780
+I, [2014-03-19T22:42:26.785611 #2780]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:42:28.342236 #2777]  INFO -- : worker=0 ready
+I, [2014-03-19T22:42:28.345001 #2780]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:42:32] "GET / HTTP/1.0" 200 4487 0.0223
+50.200.196.50 - - [19/Mar/2014 22:42:35] "GET / HTTP/1.0" 200 4487 0.0167
+50.200.196.50 - - [19/Mar/2014 22:42:37] "GET /callback?code=f20cefbcd3a3b22cfede HTTP/1.0" 302 - 0.0567
+50.200.196.50 - - [19/Mar/2014 22:42:37] "GET / HTTP/1.0" 200 4487 0.0070
+50.200.196.50 - - [19/Mar/2014 22:42:40] "GET / HTTP/1.0" 200 4486 0.0086
+50.200.196.50 - - [19/Mar/2014 22:42:41] "GET / HTTP/1.0" 200 4487 0.0070
+50.200.196.50 - - [19/Mar/2014 22:42:42] "GET / HTTP/1.0" 200 4486 0.0071
+50.200.196.50 - - [19/Mar/2014 22:42:42] "GET / HTTP/1.0" 200 4487 0.0103
+50.200.196.50 - - [19/Mar/2014 22:42:43] "GET / HTTP/1.0" 200 4486 0.0104
+50.200.196.50 - - [19/Mar/2014 22:42:43] "GET / HTTP/1.0" 200 4487 0.0070
+50.200.196.50 - - [19/Mar/2014 22:42:44] "GET / HTTP/1.0" 200 4486 0.0106
+50.200.196.50 - - [19/Mar/2014 22:42:44] "GET / HTTP/1.0" 200 4487 0.0071
+50.200.196.50 - - [19/Mar/2014 22:42:45] "GET / HTTP/1.0" 200 4486 0.0078
+50.200.196.50 - - [19/Mar/2014 22:42:45] "GET / HTTP/1.0" 200 4487 0.0077
+50.200.196.50 - - [19/Mar/2014 22:42:46] "GET / HTTP/1.0" 200 4486 0.0287
+50.200.196.50 - - [19/Mar/2014 22:42:46] "GET / HTTP/1.0" 200 4487 0.0283
+50.200.196.50 - - [19/Mar/2014 22:42:46] "GET / HTTP/1.0" 200 4486 0.0113
+50.200.196.50 - - [19/Mar/2014 22:42:47] "GET / HTTP/1.0" 200 4487 0.0103
+50.200.196.50 - - [19/Mar/2014 22:42:47] "GET / HTTP/1.0" 200 4486 0.0073
+I, [2014-03-19T22:42:53.528843 #2774]  INFO -- : reaped #<Process::Status: pid 2777 exit 0> worker=0
+I, [2014-03-19T22:42:53.529088 #2774]  INFO -- : reaped #<Process::Status: pid 2780 exit 0> worker=1
+I, [2014-03-19T22:42:53.529261 #2774]  INFO -- : master complete
+I, [2014-03-19T22:44:16.151398 #2829]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:44:16.151793 #2829]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:44:16.155290 #2829]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:44:16.156106 #2829]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:44:16.156754 #2829]  INFO -- : master process ready
+I, [2014-03-19T22:44:16.164807 #2832]  INFO -- : worker=0 spawned pid=2832
+I, [2014-03-19T22:44:16.165135 #2832]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:44:16.172840 #2834]  INFO -- : worker=1 spawned pid=2834
+I, [2014-03-19T22:44:16.173116 #2834]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:44:17.573462 #2834]  INFO -- : worker=1 ready
+I, [2014-03-19T22:44:17.574490 #2832]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:44:22] "GET / HTTP/1.0" 200 4487 0.0166
+50.200.196.50 - - [19/Mar/2014 22:44:23] "GET / HTTP/1.0" 200 4487 0.0219
+50.200.196.50 - - [19/Mar/2014 22:44:25] "GET /callback?code=b6a39655e5979c5ce3a8 HTTP/1.0" 302 - 0.0547
+50.200.196.50 - - [19/Mar/2014 22:44:25] "GET / HTTP/1.0" 200 4487 0.0087
+50.200.196.50 - - [19/Mar/2014 22:44:27] "GET / HTTP/1.0" 200 4486 0.0095
+50.200.196.50 - - [19/Mar/2014 22:44:28] "GET / HTTP/1.0" 200 4487 0.0127
+50.200.196.50 - - [19/Mar/2014 22:44:28] "GET / HTTP/1.0" 200 4486 0.0072
+50.200.196.50 - - [19/Mar/2014 22:44:29] "GET / HTTP/1.0" 200 4487 0.0069
+50.200.196.50 - - [19/Mar/2014 22:44:29] "GET / HTTP/1.0" 200 4486 0.0073
+50.200.196.50 - - [19/Mar/2014 22:44:29] "GET / HTTP/1.0" 200 4487 0.0083
+50.200.196.50 - - [19/Mar/2014 22:44:30] "GET / HTTP/1.0" 200 4486 0.0100
+50.200.196.50 - - [19/Mar/2014 22:44:30] "GET / HTTP/1.0" 200 4487 0.0077
+50.200.196.50 - - [19/Mar/2014 22:44:31] "GET / HTTP/1.0" 200 4486 0.0083
+50.200.196.50 - - [19/Mar/2014 22:44:31] "GET / HTTP/1.0" 200 4487 0.0097
+50.200.196.50 - - [19/Mar/2014 22:44:32] "GET / HTTP/1.0" 200 4486 0.0314
+50.200.196.50 - - [19/Mar/2014 22:45:04] "GET / HTTP/1.0" 200 4487 0.0390
+50.200.196.50 - - [19/Mar/2014 22:45:05] "GET / HTTP/1.0" 200 4486 0.0080
+50.200.196.50 - - [19/Mar/2014 22:45:05] "GET / HTTP/1.0" 200 4487 0.0083
+I, [2014-03-19T22:45:08.500936 #2829]  INFO -- : reaped #<Process::Status: pid 2832 exit 0> worker=0
+I, [2014-03-19T22:45:08.501164 #2829]  INFO -- : reaped #<Process::Status: pid 2834 exit 0> worker=1
+I, [2014-03-19T22:45:08.501319 #2829]  INFO -- : master complete
+I, [2014-03-19T22:45:26.495089 #2870]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:45:26.495493 #2870]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:45:26.495675 #2870]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:45:26.499407 #2870]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:45:26.500122 #2870]  INFO -- : master process ready
+I, [2014-03-19T22:45:26.516898 #2875]  INFO -- : worker=1 spawned pid=2875
+I, [2014-03-19T22:45:26.517231 #2875]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:45:26.525999 #2873]  INFO -- : worker=0 spawned pid=2873
+I, [2014-03-19T22:45:26.526256 #2873]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:45:27.870679 #2875]  INFO -- : worker=1 ready
+I, [2014-03-19T22:45:27.900319 #2873]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:45:28] "GET / HTTP/1.0" 200 4487 0.0226
+50.200.196.50 - - [19/Mar/2014 22:45:30] "GET / HTTP/1.0" 200 4487 0.0223
+50.200.196.50 - - [19/Mar/2014 22:45:31] "GET / HTTP/1.0" 200 4487 0.0107
+50.200.196.50 - - [19/Mar/2014 22:45:54] "GET /callback?code=817e7b92b04cba4f8d9b HTTP/1.0" 302 - 0.0564
+50.200.196.50 - - [19/Mar/2014 22:45:54] "GET / HTTP/1.0" 200 4487 0.0073
+50.200.196.50 - - [19/Mar/2014 22:45:57] "GET / HTTP/1.0" 200 4486 0.0072
+50.200.196.50 - - [19/Mar/2014 22:45:59] "GET / HTTP/1.0" 200 4487 0.0100
+50.200.196.50 - - [19/Mar/2014 22:45:59] "GET / HTTP/1.0" 200 4486 0.0101
+50.200.196.50 - - [19/Mar/2014 22:46:00] "GET / HTTP/1.0" 200 4487 0.0087
+50.200.196.50 - - [19/Mar/2014 22:46:45] "GET / HTTP/1.0" 200 4486 0.0078
+50.200.196.50 - - [19/Mar/2014 22:46:50] "GET / HTTP/1.0" 200 4487 0.0072
+50.200.196.50 - - [19/Mar/2014 22:47:08] "GET / HTTP/1.0" 200 4486 0.0073
+50.200.196.50 - - [19/Mar/2014 22:47:10] "GET / HTTP/1.0" 200 4487 0.0110
+50.200.196.50 - - [19/Mar/2014 22:47:10] "GET / HTTP/1.0" 200 4486 0.0083
+50.200.196.50 - - [19/Mar/2014 22:47:11] "GET / HTTP/1.0" 200 4487 0.0293
+50.200.196.50 - - [19/Mar/2014 22:47:12] "GET / HTTP/1.0" 200 4486 0.0295
+50.200.196.50 - - [19/Mar/2014 22:47:13] "GET /logout HTTP/1.0" 302 - 0.0021
+50.200.196.50 - - [19/Mar/2014 22:47:13] "GET / HTTP/1.0" 200 4487 0.0068
+50.200.196.50 - - [19/Mar/2014 22:47:24] "GET /callback?code=9e1370893c85f300e776 HTTP/1.0" 302 - 0.0584
+50.200.196.50 - - [19/Mar/2014 22:47:24] "GET / HTTP/1.0" 200 4487 0.0072
+50.200.196.50 - - [19/Mar/2014 22:47:26] "GET / HTTP/1.0" 200 4486 0.0097
+50.200.196.50 - - [19/Mar/2014 22:47:28] "GET / HTTP/1.0" 200 4487 0.0096
+50.200.196.50 - - [19/Mar/2014 22:47:29] "GET / HTTP/1.0" 200 4486 0.0111
+50.200.196.50 - - [19/Mar/2014 22:47:30] "GET / HTTP/1.0" 200 4487 0.0075
+50.200.196.50 - - [19/Mar/2014 22:47:30] "GET / HTTP/1.0" 200 4486 0.0073
+50.200.196.50 - - [19/Mar/2014 22:47:31] "GET / HTTP/1.0" 200 4487 0.0077
+I, [2014-03-19T22:48:51.717083 #2870]  INFO -- : reaped #<Process::Status: pid 2873 exit 0> worker=0
+I, [2014-03-19T22:48:51.717248 #2870]  INFO -- : reaped #<Process::Status: pid 2875 exit 0> worker=1
+I, [2014-03-19T22:48:51.717361 #2870]  INFO -- : master complete
+I, [2014-03-19T22:48:58.031105 #2898]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:48:58.031531 #2898]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:48:58.031726 #2898]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:48:58.036753 #2898]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:48:58.039043 #2898]  INFO -- : master process ready
+I, [2014-03-19T22:48:58.048390 #2901]  INFO -- : worker=0 spawned pid=2901
+I, [2014-03-19T22:48:58.048721 #2901]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:48:58.057043 #2903]  INFO -- : worker=1 spawned pid=2903
+I, [2014-03-19T22:48:58.057332 #2903]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:48:59.647113 #2901]  INFO -- : worker=0 ready
+I, [2014-03-19T22:48:59.658953 #2903]  INFO -- : worker=1 ready
+50.200.196.50 - - [19/Mar/2014 22:49:00] "GET / HTTP/1.0" 200 4487 0.0190
+50.200.196.50 - - [19/Mar/2014 22:49:01] "GET / HTTP/1.0" 200 4487 0.0160
+50.200.196.50 - - [19/Mar/2014 22:49:02] "GET / HTTP/1.0" 200 4487 0.0071
+50.200.196.50 - - [19/Mar/2014 22:49:02] "GET / HTTP/1.0" 200 4487 0.0066
+50.200.196.50 - - [19/Mar/2014 22:49:03] "GET / HTTP/1.0" 200 4487 0.0100
+50.200.196.50 - - [19/Mar/2014 22:49:04] "GET /callback?code=5a69f918db23863c5e68 HTTP/1.0" 302 - 0.0575
+50.200.196.50 - - [19/Mar/2014 22:49:04] "GET / HTTP/1.0" 200 4487 0.0076
+50.200.196.50 - - [19/Mar/2014 22:49:06] "GET / HTTP/1.0" 200 4486 0.0081
+50.200.196.50 - - [19/Mar/2014 22:49:07] "GET / HTTP/1.0" 200 4487 0.0068
+50.200.196.50 - - [19/Mar/2014 22:49:07] "GET / HTTP/1.0" 200 4486 0.0077
+50.200.196.50 - - [19/Mar/2014 22:49:08] "GET / HTTP/1.0" 200 4487 0.0078
+50.200.196.50 - - [19/Mar/2014 22:49:09] "GET / HTTP/1.0" 200 4486 0.0095
+50.200.196.50 - - [19/Mar/2014 22:49:09] "GET / HTTP/1.0" 200 4487 0.0070
+I, [2014-03-19T22:49:14.674190 #2898]  INFO -- : reaped #<Process::Status: pid 2901 exit 0> worker=0
+I, [2014-03-19T22:49:14.674434 #2898]  INFO -- : reaped #<Process::Status: pid 2903 exit 0> worker=1
+I, [2014-03-19T22:49:14.674611 #2898]  INFO -- : master complete
+I, [2014-03-19T22:51:48.536244 #2975]  INFO -- : unlinking existing socket=/var/www/precess.co/tmp/sockets/unicorn.sock
+I, [2014-03-19T22:51:48.536839 #2975]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:51:48.537092 #2975]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:51:48.538142 #2975]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:51:48.539073 #2978]  INFO -- : worker=0 spawned pid=2978
+I, [2014-03-19T22:51:48.539385 #2978]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:51:48.540789 #2975]  INFO -- : master process ready
+I, [2014-03-19T22:51:48.562179 #2981]  INFO -- : worker=1 spawned pid=2981
+I, [2014-03-19T22:51:48.562571 #2981]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:51:50.028536 #2981]  INFO -- : worker=1 ready
+I, [2014-03-19T22:51:50.032130 #2978]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:51:50] "GET / HTTP/1.0" 200 4487 0.0165
+50.200.196.50 - - [19/Mar/2014 22:51:54] "GET /callback?code=3b3920835bff69b5c294 HTTP/1.0" 302 - 0.0695
+50.200.196.50 - - [19/Mar/2014 22:51:54] "GET / HTTP/1.0" 200 4487 0.0090
+50.200.196.50 - - [19/Mar/2014 22:51:56] "GET / HTTP/1.0" 200 4486 0.0070
+50.200.196.50 - - [19/Mar/2014 22:51:56] "GET / HTTP/1.0" 200 4487 0.0075
+50.200.196.50 - - [19/Mar/2014 22:51:57] "GET / HTTP/1.0" 200 4486 0.0067
+50.200.196.50 - - [19/Mar/2014 22:51:58] "GET / HTTP/1.0" 200 4487 0.0089
+50.200.196.50 - - [19/Mar/2014 22:51:58] "GET / HTTP/1.0" 200 4486 0.0070
+50.200.196.50 - - [19/Mar/2014 22:51:59] "GET / HTTP/1.0" 200 4487 0.0069
+I, [2014-03-19T22:52:08.680475 #2975]  INFO -- : reaped #<Process::Status: pid 2978 exit 0> worker=0
+I, [2014-03-19T22:52:08.680655 #2975]  INFO -- : reaped #<Process::Status: pid 2981 exit 0> worker=1
+I, [2014-03-19T22:52:08.680796 #2975]  INFO -- : master complete
+I, [2014-03-19T22:57:23.034825 #3045]  INFO -- : listening on addr=/var/www/precess.co/tmp/sockets/unicorn.sock fd=10
+I, [2014-03-19T22:57:23.035147 #3045]  INFO -- : worker=0 spawning...
+I, [2014-03-19T22:57:23.038956 #3045]  INFO -- : worker=1 spawning...
+I, [2014-03-19T22:57:23.039543 #3045]  INFO -- : master process ready
+I, [2014-03-19T22:57:23.048700 #3048]  INFO -- : worker=0 spawned pid=3048
+I, [2014-03-19T22:57:23.048990 #3048]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:57:23.056748 #3050]  INFO -- : worker=1 spawned pid=3050
+I, [2014-03-19T22:57:23.057006 #3050]  INFO -- : Refreshing Gem list
+I, [2014-03-19T22:57:24.347087 #3050]  INFO -- : worker=1 ready
+I, [2014-03-19T22:57:24.348958 #3048]  INFO -- : worker=0 ready
+50.200.196.50 - - [19/Mar/2014 22:57:24] "GET / HTTP/1.0" 200 4487 0.0141
+50.200.196.50 - - [19/Mar/2014 22:57:26] "GET /callback?code=5bb761e4c596ef7d092f HTTP/1.0" 302 - 0.0744
+50.200.196.50 - - [19/Mar/2014 22:57:26] "GET / HTTP/1.0" 200 4487 0.0091
+50.200.196.50 - - [19/Mar/2014 22:57:27] "GET /callback?code=bca5314be5c3fdfaeb23 HTTP/1.0" 302 - 0.0592
+50.200.196.50 - - [19/Mar/2014 22:57:27] "GET / HTTP/1.0" 200 4487 0.0083
+50.200.196.50 - - [19/Mar/2014 22:57:28] "GET /callback?code=bc7129eb9af25bff8f6a HTTP/1.0" 302 - 0.0580
+50.200.196.50 - - [19/Mar/2014 22:57:28] "GET / HTTP/1.0" 200 4487 0.0058
+50.200.196.50 - - [19/Mar/2014 22:57:29] "GET / HTTP/1.0" 200 4486 0.0067
+50.200.196.50 - - [19/Mar/2014 22:57:30] "GET / HTTP/1.0" 200 4487 0.0068
+50.200.196.50 - - [19/Mar/2014 22:57:31] "GET / HTTP/1.0" 200 4486 0.0069
+50.200.196.50 - - [19/Mar/2014 22:57:32] "GET / HTTP/1.0" 200 4487 0.0061
+50.200.196.50 - - [19/Mar/2014 22:57:33] "GET / HTTP/1.0" 200 4486 0.0069
+50.200.196.50 - - [19/Mar/2014 22:57:33] "GET / HTTP/1.0" 200 4487 0.0064
+50.200.196.50 - - [19/Mar/2014 22:57:34] "GET / HTTP/1.0" 200 4486 0.0062
+50.200.196.50 - - [19/Mar/2014 22:57:35] "GET / HTTP/1.0" 200 4487 0.0306
+50.200.196.50 - - [19/Mar/2014 22:57:35] "GET / HTTP/1.0" 200 4486 0.0070
+50.200.196.50 - - [19/Mar/2014 22:57:36] "GET / HTTP/1.0" 200 4487 0.0062
+50.200.196.50 - - [19/Mar/2014 22:57:38] "GET / HTTP/1.0" 200 4486 0.0321
+50.200.196.50 - - [19/Mar/2014 22:57:38] "GET / HTTP/1.0" 200 4487 0.0064
+50.200.196.50 - - [19/Mar/2014 22:57:39] "GET / HTTP/1.0" 200 4486 0.0065
+50.200.196.50 - - [19/Mar/2014 22:57:40] "GET / HTTP/1.0" 200 4487 0.0061

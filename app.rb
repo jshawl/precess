@@ -19,11 +19,11 @@ get '/logout' do
 end
 
 post '/create-gist' do
-  input_name = 'sasscade-input-' + Time.now.to_i.to_s + '.scss'
-  output_name = 'sasscade-output-' + Time.now.to_i.to_s + '.css'
+  input_name = 'precess-input-' + Time.now.to_i.to_s + '.scss'
+  output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
   res = RestClient.post('https://api.github.com/gists?access_token='+ access_token,
 		         {
-			    'description' => 'a sasscade production',
+			    'description' => 'a precess production',
 			    'public' => true,
 			    'files' => {
 			      input_name => {
@@ -60,6 +60,5 @@ get '/callback' do
                            :code => session_code},
                            :accept => :json)
   access_token = JSON.parse(result)['access_token']
-  puts access_token
   redirect to('/');
 end
