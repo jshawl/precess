@@ -60,6 +60,24 @@
       localStorage.removeItem('data');
       window.location = $(this).attr('href');
     });
+    $('.js-create-gist').on('click', function(event){
+        event.preventDefault();
+        $.ajax({
+	  type: "POST",
+	  url: '/create-gist',
+	  data: { 
+	    'sass': editor.getValue(),
+	    'css': csseditor.getValue()
+	  }
+	}).done( function(res){
+	  var reply = JSON.parse(res);
+	  console.log( reply.html_url );
+	  $('.js-create-gist').attr('href', reply.html_url);
+	  $viewGist = $('<li><a href="'+ reply.html_url +'"> View Gist </a></li>');
+	  $('.js-create-gist').parent().after( $viewGist );
+	  $('.js-create-gist').remove();
+        });
+    });
 
     $(function(){
       var hash = window.location.hash.substr(1);

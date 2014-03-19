@@ -12,15 +12,19 @@ get '/' do
   erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token }
 end
 
-get '/create-gist' do
-  puts 'https://api.github.com/gists?access_token='+access_token
+post '/create-gist' do
+  input_name = 'sasscade-input-' + Time.now.to_i.to_s + '.scss'
+  output_name = 'sasscade-output-' + Time.now.to_i.to_s + '.css'
   res = RestClient.post('https://api.github.com/gists?access_token='+ access_token,
 		         {
-			    'description' => 'from sinatra!',
+			    'description' => 'a sasscade production',
 			    'public' => true,
 			    'files' => {
-			      'from-sinatra.rb' => {
-				"content"=>'this is the content'
+			      input_name => {
+				"content"=> params[:sass]
+			      },
+			      output_name => {
+				"content"=> params[:css]
 			      }
 			    }
                          }.to_json
