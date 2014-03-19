@@ -7,11 +7,14 @@
   </head>
   <body>
     <header>
-      <h1><a href='/'>SASSCADE</a></h1>
+      <h1><a href='/' class='js-clear'>SASSCADE</a></h1>
       <nav>
         <ul>
-	  <li><a href='https://github.com/login/oauth/authorize?redirect_uri=http://localhost:4567/callback&scope=gist&client_id=<%= client_id %>' class=''>Create Gist</a></li>
-	  <li><a href='#' class='js-save'>Save</a></li>
+	  <% if access_token != '' %>
+	    <li><a href='/create-gist' class='js-create-gist'>Create Gist</a></li>
+	  <% else %>
+	    <li><a href='https://github.com/login/oauth/authorize?redirect_uri=http://localhost:4567/callback&scope=gist&client_id=<%= client_id %>' class=''>Login with GitHub</a></li>
+	  <% end %>
 	</ul>
       </nav>
     </header>

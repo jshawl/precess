@@ -8,14 +8,8 @@ CLIENT_ID = ENV['GH_BASIC_CLIENT_ID']
 CLIENT_SECRET = ENV['GH_BASIC_SECRET_ID']
 access_token = ''
 
-puts CLIENT_ID
-
-
 get '/' do
-  unless access_token.nil?
-    puts access_token
-  end
-  erb :index, :locals => { :client_id => CLIENT_ID }
+  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token }
 end
 
 get '/create-gist' do

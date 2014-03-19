@@ -36,6 +36,7 @@
     editor.on('change', function(cm){
       clearTimeout(timer);
       timer = setTimeout(function(){
+	save( null );
         $.ajax({
 	  type: "POST",
 	  url: '/compile',
@@ -47,16 +48,25 @@
         });
       }, 1000);
     });
-    $('.js-save').on('click', function( event ){
-      event.preventDefault();
+    function save( event ){
+      if (event) event.preventDefault();
       var data = editor.getValue();
+      localStorage.setItem('data', btoa(data) );
       window.location.hash = btoa(data);
+    }
+    $('.js-save').on('click', save );
+    $('.js-clear').on('click', function(event){
+      event.preventDefault();
+      localStorage.removeItem('data');
+      window.location = $(this).attr('href');
     });
+
     $(function(){
       var hash = window.location.hash.substr(1);
-      console.log(hash);
       if ( hash ) {
         editor.getDoc().setValue( atob( hash ) );
+      } else if ( localStorage.data ){
+        editor.getDoc().setValue( atob( localStorage.data ) );
       }
     });
 </script>
