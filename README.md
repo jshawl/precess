@@ -1,5 +1,12 @@
 # Precess
 
+## Running Locally
+
+    $ git clone https://github.com/jshawl/precess.git
+    $ cd precess
+    $ bundle install
+    $ ruby app.rb
+
 ## License
 
 The MIT License (MIT)
