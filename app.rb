@@ -14,8 +14,6 @@ URL = ENV['GH_URL']
 
 
 get '/' do
-  puts 'BACK HOME'
-  puts session['access_token']
   unless  session['access_token'] != ''
     session['access_token'] = ''
   end

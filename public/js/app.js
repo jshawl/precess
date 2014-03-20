@@ -1,4 +1,4 @@
-var myTextarea = document.querySelector('.js-sass');
+    var myTextarea = document.querySelector('.js-input');
     var editor = CodeMirror.fromTextArea(myTextarea, {
       matchBrackets: true,
       mode: "text/x-scss",
@@ -7,7 +7,6 @@ var myTextarea = document.querySelector('.js-sass');
       gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
       foldGutter: true
     });
-    editor.foldCode(CodeMirror.Pos(0, 0));
     var css = document.querySelector('.js-css');
     var csseditor = CodeMirror.fromTextArea(css, {
       mode: "css",
