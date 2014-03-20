@@ -4,24 +4,33 @@ require 'rest-client'
 require 'json'
 require './env' if File.exists?('env.rb')
 
+enable :sessions
+set :session_secret, "here be dragons"
+
+
 CLIENT_ID = ENV['GH_BASIC_CLIENT_ID']
 CLIENT_SECRET = ENV['GH_BASIC_SECRET_ID']
 URL = ENV['GH_URL']
-access_token = ''
+
 
 get '/' do
-  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => access_token, :url => URL }
+  puts 'BACK HOME'
+  puts session['access_token']
+  unless  session['access_token'] != ''
+    session['access_token'] = ''
+  end
+  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => session['access_token'], :url => URL }
 end
 
 get '/logout' do
-  access_token = ''
+  session['access_token'] = ''
   redirect to('/')
 end
 
 post '/create-gist' do
   input_name = 'precess-input-' + Time.now.to_i.to_s + '.scss'
   output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
-  res = RestClient.post('https://api.github.com/gists?access_token='+ access_token,
+  res = RestClient.post('https://api.github.com/gists?access_token='+ session['access_token'],
 		         {
 			    'description' => 'a precess production',
 			    'public' => true,
@@ -59,6 +68,8 @@ get '/callback' do
                            :client_secret => CLIENT_SECRET,
                            :code => session_code},
                            :accept => :json)
-  access_token = JSON.parse(result)['access_token']
+  session['access_token'] = JSON.parse(result)['access_token']
+  puts 'authenticated successfully'
+  puts session['access_token']
   redirect to('/');
 end
