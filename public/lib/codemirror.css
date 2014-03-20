@@ -20,6 +20,15 @@ html,body{
   left:50%;
 }
 
+@media all and (max-width:500px){
+  .sass, .css{
+    position:relative;
+    width:100%;
+    left:0;
+    height:50%;
+  }
+}
+
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family:'Inconsolata', monospace;
