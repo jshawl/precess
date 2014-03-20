@@ -8,7 +8,8 @@ html,body{
 .sass,
 .css{
   width:50%;
-  height:100%;
+  height: calc(100% - 65px);
+  margin-bottom: 20px;
 }
 
 .sass{
