@@ -21,13 +21,15 @@
       clearTimeout(timer);
       timer = setTimeout(function(){
 	save( null );
+	var lang = cm.getTextArea().name;
         $.ajax({
 	  type: "POST",
 	  url: '/compile',
-	  data: { 'sass': cm.getValue()}
+	  data: { lang : lang, input : cm.getValue()}
 	}).done( function(res){
           $('.js-css').val( res );
           csseditor.getDoc().setValue(res);
+	  editor.getDoc().setValue( atob( localStorage.data.split(':')[1] ) );
         }).fail(function (err, msg){
         });
       }, 1000);
@@ -40,8 +42,9 @@
         $('.js-view-gist').parent().remove(); 
       }
       var data = editor.getValue();
-      localStorage.setItem('data', btoa(data) );
-      window.location.hash = btoa(data);
+      var lang = editor.getTextArea().name;
+      localStorage.setItem('data', lang+':'+btoa(data) );
+      window.location.hash = lang+':'+btoa(data);
     }
     $(document).on('click','.js-clear', function(event){
       event.preventDefault();
@@ -59,7 +62,6 @@
 	  }
 	}).done( function(res){
 	  var reply = JSON.parse(res);
-	  console.log( reply.html_url );
 	  $('.js-create-gist').attr('href', reply.html_url);
 	  $viewGist = $('<li><a class="js-view-gist" href="'+ reply.html_url +'"> View Gist </a></li>');
 	  $('.js-create-gist').parent().after( $viewGist );
@@ -67,10 +69,29 @@
         });
     });
 
+   $('.opts').on('click', function(event){
+    event.preventDefault();
+  $(this).toggleClass('active');
+    
+});
+
+$('.opts a').on('click', function(){
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+  var lang = $(this).attr('data-lang');
+  var mode = editor.options.mode;
+  var simplemode = mode.split('-')[1];
+  if (!mode.match( lang )) {
+    editor.options.mode = 'text/x-' + lang;
+    $('.js-input').attr('name', lang);
+  }
+}); 
+
     $(function(){
       var hash = window.location.hash.substr(1);
-      if ( hash ) {
-        editor.getDoc().setValue( atob( hash ) );
+      var input = hash.split(':')[1];
+      if ( input ) {
+        editor.getDoc().setValue( atob( input ) );
       } else if ( localStorage.data ){
         editor.getDoc().setValue( atob( localStorage.data ) );
       }

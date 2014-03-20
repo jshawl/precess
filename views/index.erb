@@ -21,9 +21,14 @@
       </nav>
     </header>
 <form method='post' class='input sass' action='/compile'>
-  <textarea class='js-input' name='sass'><%= @input %></textarea>
+  <div class='opts'>
+    <a data-lang='scss' href='#' class='active'>scss</a>
+    <a href='#' data-lang='less'>less</a>
+    <span>&blacktriangledown;</span>
+  </div>
+  <textarea class='js-input' name='scss'><%= @input %></textarea>
 </form>
 <form class='css'>
-  <textarea class='js-css' name='sass'><%= @css %></textarea>
+  <textarea class='js-css' name='css'><%= @css %></textarea>
 </form>
 <%= erb :'includes/footer' %>

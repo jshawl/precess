@@ -34,33 +34,36 @@ end
 post '/create-gist' do
   input_name = 'precess-input-' + Time.now.to_i.to_s + '.scss'
   output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
-  res = RestClient.post('https://api.github.com/gists?access_token='+ session['access_token'],
-		         {
-			    'description' => 'a precess production',
-			    'public' => true,
-			    'files' => {
-			      input_name => {
-				"content"=> params[:sass]
-			      },
-			      output_name => {
-				"content"=> params[:css]
-			      }
-			    }
-                         }.to_json
-		       ) 
+  res = RestClient.post('https://api.github.com/gists?access_token='+ session['access_token'], {
+	'description' => 'a precess production',
+	'public' => true,
+	'files' => {
+	  input_name => {
+	    "content"=> params[:sass]
+	  },
+	  output_name => {
+	    "content"=> params[:css]
+	  }
+	}
+     }.to_json
+   ) 
 end
 
 post '/compile' do
-  begin
-    @sass = params[:sass]
-    sass = Sass::Engine.new(@sass, {
-      :syntax => :scss,
-      :style => :expanded
-    })
-    @css = sass.render
-  rescue Sass::SyntaxError => e
-    res = "Line " + e.sass_line.to_s + ": "  +  e.to_s
-    @css = res
+  if params[:lang] == 'scss'
+    begin
+      @scss = params[:input]
+      scss = Sass::Engine.new(@scss, {
+	:syntax => :scss,
+	:style => :expanded
+      })
+      @css = scss.render
+    rescue Sass::SyntaxError => e
+      res = "Line " + e.sass_line.to_s + ": "  +  e.to_s
+      @css = res
+    end
+  elsif params[:lang]=='less'
+    @css = 'less is here'
   end
   erb :compile
 end

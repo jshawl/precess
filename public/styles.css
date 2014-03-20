@@ -11,16 +11,13 @@ body{
   margin:0;
 }
 
-.css:before,
-.sass:before{
-  position:absolute;
-  right:10px;
-  top:10px;
+.opts a{
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  display:block;
+  display:none;
   background:#f7f7f7;
+  text-decoration:none;
   border:1px solid #ddd;
   padding:1em;
   color:rgba(0,0,0,.6);
@@ -31,16 +28,36 @@ body{
   font-weight:600;
 }
 
+.opts.active a{
+  display:block;
+}
+
+.opts a:nth-child(2){
+  border-radius:0 0 10px 10px;
+  border-top:0;
+}
+.opts a:nth-child(1){
+  border-radius:10px 10px 0 0 ;
+}
+
+.opts a.active{
+  display:block;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.opts.active a:nth-child(1){
+  border-radius: 10px 10px 0 0;
+}
+.opts.active a:nth-child(2){
+  border-radius: 0 0 10px 10px ;
+}
+
+
 .CodeMirror-gutters {
   border-left:1px solid #ddd;
 }
 
-.css:before{
-  content:'css';
-}
-.sass:before{
-  content:'scss';
-}
 
 body{
   font-family:'Lato';
@@ -137,4 +154,23 @@ footer, footer a {
   color:#000;
   box-sizing:border-box;
   text-decoration:none;
+}
+
+.opts{
+  width:75px;
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:999;
+}
+.opts span{
+  position:absolute; 
+  right:8px;
+  top:8px;
+  color:#666;
+}
+
+.active span{
+  transform:rotate(180deg);
+  transform-origin:50% 50%;
 }
