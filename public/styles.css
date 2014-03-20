@@ -68,6 +68,8 @@ header nav li{
 header a {
   color:#fff;
   line-height:1.5em;
+  font-weight:300;
+  text-decoration:none;
 }
 
 header h1 a{

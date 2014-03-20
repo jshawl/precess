@@ -59,7 +59,7 @@
       localStorage.setItem('data', btoa(data) );
       window.location.hash = btoa(data);
     }
-    $('.js-clear').on('click', function(event){
+    $(document).on('click','.js-clear', function(event){
       event.preventDefault();
       localStorage.removeItem('data');
       window.location = $(this).attr('href');

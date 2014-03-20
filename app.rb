@@ -19,7 +19,13 @@ get '/' do
   unless  session['access_token'] != ''
     session['access_token'] = ''
   end
-  erb :index, :locals => { :client_id => CLIENT_ID , :access_token => session['access_token'], :url => URL }
+  erb :index, :locals => { 
+    :client_id => CLIENT_ID,
+    :access_token => session['access_token'], 
+    :url => URL,
+    :user_name => session['user_name'],
+    :avatar_url => session['avatar_url']
+  }
 end
 
 get '/logout' do
@@ -69,7 +75,9 @@ get '/callback' do
                            :code => session_code},
                            :accept => :json)
   session['access_token'] = JSON.parse(result)['access_token']
-  puts 'authenticated successfully'
-  puts session['access_token']
+  user = JSON.parse(RestClient.get('https://api.github.com/user?access_token=' + session['access_token']))
+
+  session['user_name'] = user['login']
+  session['avatar_url'] = user['avatar_url']
   redirect to('/');
 end
