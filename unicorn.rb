@@ -2,7 +2,7 @@
 # note the trailing slash in this example
 @dir = "/var/www/precess.co/"
 
-worker_processes 1
+worker_processes 2
 working_directory @dir
 
 timeout 30
