@@ -32,14 +32,15 @@ get '/logout' do
 end
 
 post '/create-gist' do
-  input_name = 'precess-input-' + Time.now.to_i.to_s + '.scss'
+  ext = params[:extention]
+  input_name = 'precess-input-' + Time.now.to_i.to_s + '.'+ ext
   output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
   res = RestClient.post('https://api.github.com/gists?access_token='+ session['access_token'], {
 	'description' => 'a precess production',
 	'public' => true,
 	'files' => {
 	  input_name => {
-	    "content"=> params[:sass]
+	    "content"=> params[:input]
 	  },
 	  output_name => {
 	    "content"=> params[:css]
