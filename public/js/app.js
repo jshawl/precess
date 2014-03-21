@@ -34,6 +34,7 @@
       }, 1000);
     }
     editor.on('change', refresh );
+
     function save( event ){
       if (event) event.preventDefault();
       if( $('.js-view-gist') ){
@@ -91,7 +92,12 @@ $('.opts a').on('click', function(){
     $(function(){
       var hash = window.location.hash.substr(1);
       var input = hash.split(':')[1];
+      var lang = hash.split(':')[0];
+      console.log(input, lang);
       if ( input ) {
+	editor.options.mode = 'text/x-'+lang;
+	$('.js-input').attr('name', lang);
+	$("[data-lang='"+lang+"']").addClass('active').siblings().removeClass('active');
         editor.getDoc().setValue( atob( input ) );
       } else if ( localStorage.data ){
         editor.getDoc().setValue( atob( localStorage.data ) );

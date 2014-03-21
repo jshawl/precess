@@ -63,7 +63,11 @@ post '/compile' do
       @output = res
     end
   elsif params[:lang]=='less'
-    @output = 'less is here'
+    @input = params[:input]
+    ls = RestClient.post('http://localhost:3000/less', {
+      :less => params[:input]
+    })
+    @output = ls
   end
   erb :compile
 end
