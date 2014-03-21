@@ -17,7 +17,7 @@
     });
     csseditor.foldCode(CodeMirror.Pos(0, 0));
     var timer;
-    editor.on('change', function(cm){
+    function refresh(cm){
       clearTimeout(timer);
       timer = setTimeout(function(){
 	save( null );
@@ -29,11 +29,11 @@
 	}).done( function(res){
           $('.js-css').val( res );
           csseditor.getDoc().setValue(res);
-	  editor.getDoc().setValue( atob( localStorage.data.split(':')[1] ) );
         }).fail(function (err, msg){
         });
       }, 1000);
-    });
+    }
+    editor.on('change', refresh );
     function save( event ){
       if (event) event.preventDefault();
       if( $('.js-view-gist') ){
@@ -84,6 +84,7 @@ $('.opts a').on('click', function(){
   if (!mode.match( lang )) {
     editor.options.mode = 'text/x-' + lang;
     $('.js-input').attr('name', lang);
+    refresh( editor );
   }
 }); 
 

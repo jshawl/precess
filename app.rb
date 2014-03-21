@@ -52,18 +52,18 @@ end
 post '/compile' do
   if params[:lang] == 'scss'
     begin
-      @scss = params[:input]
-      scss = Sass::Engine.new(@scss, {
+      @input = params[:input]
+      scss = Sass::Engine.new(@input, {
 	:syntax => :scss,
 	:style => :expanded
       })
-      @css = scss.render
+      @output = scss.render
     rescue Sass::SyntaxError => e
       res = "Line " + e.sass_line.to_s + ": "  +  e.to_s
-      @css = res
+      @output = res
     end
   elsif params[:lang]=='less'
-    @css = 'less is here'
+    @output = 'less is here'
   end
   erb :compile
 end
