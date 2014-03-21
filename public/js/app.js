@@ -45,7 +45,11 @@
       var data = editor.getValue();
       var lang = editor.getTextArea().name;
       localStorage.setItem('data', lang+':'+btoa(data) );
-      window.location.hash = lang+':'+btoa(data);
+      if( !data ){
+        window.location.hash = lang;
+      }else{
+	window.location.hash = lang+':'+btoa(data);
+      }
     }
     $(document).on('click','.js-clear', function(event){
       event.preventDefault();
@@ -93,12 +97,18 @@ $('.opts a').on('click', function(){
       var hash = window.location.hash.substr(1);
       var input = hash.split(':')[1];
       var lang = hash.split(':')[0];
-      console.log(input, lang);
-      if ( input ) {
+      if ( !hash.match(':')){
+        input = hash;
+	lang = 'scss';
+      }
+
+      if ( input || lang ) {
 	editor.options.mode = 'text/x-'+lang;
 	$('.js-input').attr('name', lang);
 	$("[data-lang='"+lang+"']").addClass('active').siblings().removeClass('active');
-        editor.getDoc().setValue( atob( input ) );
+	if (input){
+	  editor.getDoc().setValue( atob( input ) );
+	}
       } else if ( localStorage.data ){
         editor.getDoc().setValue( atob( localStorage.data ) );
       }
