@@ -14,9 +14,7 @@ URL = ENV['GH_URL']
 
 
 get '/' do
-  unless  session['access_token'] != ''
-    session['access_token'] = ''
-  end
+  session['access_token'] ||= ''
   erb :index, :locals => { 
     :client_id => CLIENT_ID,
     :access_token => session['access_token'], 
