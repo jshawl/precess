@@ -12,7 +12,11 @@
       <nav>
         <ul>
 	  <% if access_token != '' %>
-	    <li><a href='/create-gist' class='js-create-gist'>Create Gist</a></li>
+	    <% if @content %>
+	      <li><a href='/update-gist' class='js-update-gist'>Update Gist</a></li>
+	    <% else %>
+	      <li><a href='/create-gist' class='js-create-gist'>Create Gist</a></li>
+	    <% end %>
 	    <li><a href='/logout'>Log Out <%= user_name %></a></li>
 	  <% else %>
 	    <li><a href='https://github.com/login/oauth/authorize?redirect_uri=<%= url %>/callback&scope=gist&client_id=<%= client_id %>' class=''>Log in with GitHub</a></li>
@@ -25,7 +29,7 @@
     <a data-lang='scss' href='#' class='active'>scss</a>
     <a href='#' data-lang='less'>less</a>
   </div>
-  <textarea class='js-input' name='scss'><%= @input %></textarea>
+  <textarea class='js-input' name='scss'><%= @content %></textarea>
 </form>
 <form class='css'>
   <label for='css'>css</label>

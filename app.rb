@@ -1,7 +1,10 @@
 require 'sinatra'
+require 'sinatra/reloader'
 require 'sass'
 require 'rest-client'
+require 'pry'
 require 'json'
+require 'httparty'
 require './env' if File.exists?('env.rb')
 
 enable :sessions
@@ -30,6 +33,25 @@ get '/logout' do
 end
 
 post '/create-gist' do
+  ext = params[:extention]
+  input_name = 'precess-input-' + Time.now.to_i.to_s + '.'+ ext
+  output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
+  res = RestClient.post('https://api.github.com/gists?access_token='+ session['access_token'], {
+	'description' => 'a precess production',
+	'public' => true,
+	'files' => {
+	  input_name => {
+	    "content"=> params[:input]
+	  },
+	  output_name => {
+	    "content"=> params[:css]
+	  }
+	}
+     }.to_json
+   ) 
+end
+
+post '/update-gist' do
   ext = params[:extention]
   input_name = 'precess-input-' + Time.now.to_i.to_s + '.'+ ext
   output_name = 'precess-output-' + Time.now.to_i.to_s + '.css'
@@ -84,4 +106,25 @@ get '/callback' do
   session['user_name'] = user['login']
   session['avatar_url'] = user['avatar_url']
   redirect to('/');
+end
+
+get '/gist.github.com/:user/:id' do
+  session['access_token'] ||= 'd670def8a6f9311a786faadbd8bac724ab77777d'
+  url = 'https://api.github.com/gists/' + params[:id] 
+  if session['access_token'] != ""
+    url += "?access_token="+ session['access_token']
+  end
+  res =  HTTParty.get(url)
+  res['files'].each do |f|
+    @content = f[1]["content"]
+    break
+  end
+  erb :index, :locals => { 
+    :content => @content,
+    :client_id => CLIENT_ID,
+    :access_token => session['access_token'], 
+    :url => URL,
+    :user_name => session['user_name'],
+    :avatar_url => session['avatar_url']
+  }
 end
