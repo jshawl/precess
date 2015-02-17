@@ -62,6 +62,7 @@ $(document).on('click','.js-clear', function(event){
 $(document).on('click', '.js-create-gist', function(event){
     event.preventDefault();
     var ext = $('[data-lang].active').attr('data-lang');
+    $(this).before("<img src='/img/loading-spin.svg' class='del'>");
     $.ajax({
 	type: "POST",
 	url: '/create-gist',
@@ -72,6 +73,7 @@ $(document).on('click', '.js-create-gist', function(event){
 	}
     }).done( function(res){
 	var reply = JSON.parse(res);
+	$('.del').remove();
 	$('.js-create-gist').attr('href', reply.html_url);
 	$viewGist = $('<li><a class="js-view-gist" href="'+ reply.html_url +'"> View Gist </a></li>');
 	$('.js-create-gist').parent().after( $viewGist );

@@ -94,6 +94,14 @@ header nav a {
 
 header nav li{
   display:inline-block;
+  position:relative;
+}
+
+  header nav img{
+  width:20px;
+  height:20px;
+  position:absolute;
+  left:-25px;
 }
 
 header a {
