@@ -1,6 +1,10 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 
+*{
+  box-sizing:border-box;
+}
+
 /* fontawesome */
 [class*="fontawesome-"]:before {
     font-family: 'FontAwesome', sans-serif;
@@ -11,61 +15,42 @@ body{
   margin:0;
 }
 
-.opts a,
-label{
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  display:none;
-  background:#f7f7f7;
-  text-decoration:none;
-  border:1px solid #ddd;
-  padding:1em;
-  color:rgba(0,0,0,.6);
-  text-transform:uppercase;
-  z-index:999;
-  font-size:.7em;
-  letter-spacing: 3px;
-  font-weight:600;
+.opts, label{
+  position:absolute;
+  bottom:0px;
+  z-index:1000;
+  width:100%;
 }
 
-.opts.active a{
+
+.opts a, label {
+  background:#3E123E;
+  text-decoration:none;
+  text-align:center;
+  display:none;
+  padding:1em;
+  font-size:1.5em;
+  width:100%;
+  color:#fff;
+}
+
+label{
+  display: block; 
+  position: absolute;
+}
+
+.opts.active a, .opts .active{
   display:block;
 }
+
 
 .opts a:nth-child(2){
-  border-radius:0 0 10px 10px;
-  border-top:0;
+  background:#521852;
 }
-.opts a:nth-child(1){
-  border-radius:10px 10px 0 0 ;
-}
-
-.opts a.active{
-  display:block;
-  border-radius:10px;
-  border:1px solid #ddd;
-}
-
-.opts.active a:nth-child(1){
-  border-radius: 10px 10px 0 0;
-}
-.opts.active a:nth-child(2){
-  border-radius: 0 0 10px 10px ;
-}
-
 
 .CodeMirror-gutters {
   border-left:1px solid #ddd;
 }
-
-label{
-display: block;
-position: absolute;
-right: 10px;
-top: 10px;
-}
-
 
 body{
   font-family:'Lato';
@@ -74,7 +59,7 @@ body{
 header {
   padding:20px 0px 20px 0px;
   font-weight:400;
-  background:#000;
+  background:#3E133E;
 }
 
 header:after{
@@ -105,12 +90,6 @@ header nav{
 header nav a {
   margin-right:28px;
   font-size:1em;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-header nav a:hover {
-  border-bottom:2px solid #fff;
 }
 
 header nav li{
@@ -164,19 +143,6 @@ footer, footer a {
   text-decoration:none;
 }
 
-.opts{
-  width:75px;
-  position:absolute;
-  right:10px;
-  top:10px;
-  z-index:999;
-}
-.opts span{
-  position:absolute; 
-  right:8px;
-  top:8px;
-  color:#666;
-}
 
 .active span{
   transform:rotate(180deg);

@@ -27,9 +27,12 @@ function refresh(cm){
 	    url: '/compile',
 	    data: { lang : lang, input : cm.getValue()}
 	}).done( function(res){
+	  console.log( res);
 	    $('.js-css').val( res );
 	    csseditor.getDoc().setValue(res);
-	}).fail(function (err, msg){});
+	}).fail(function (err, msg){
+	  console.log( err, msg )
+	});
     }, 1000);
 }
 function save( event ){
